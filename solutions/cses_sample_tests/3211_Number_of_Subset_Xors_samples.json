@@ -1,0 +1,12 @@
+{
+  "problem_id": "3211",
+  "problem_name": "Number of Subset Xors",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "3\n3 6 5",
+      "output": "4"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:30:50.932089"
+}

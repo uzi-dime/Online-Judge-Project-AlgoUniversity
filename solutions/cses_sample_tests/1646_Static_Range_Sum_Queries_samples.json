@@ -1,0 +1,12 @@
+{
+  "problem_id": "1646",
+  "problem_name": "Static Range Sum Queries",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "8 4\n3 2 4 5 1 1 5 3\n2 4\n5 6\n1 8\n3 3",
+      "output": "11\n2\n24\n4"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:31:17.513758"
+}

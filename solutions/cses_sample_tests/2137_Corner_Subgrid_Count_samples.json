@@ -1,0 +1,16 @@
+{
+  "problem_id": "2137",
+  "problem_name": "Corner Subgrid Count",
+  "sample_count": 2,
+  "test_cases": [
+    {
+      "input": "1",
+      "output": "0"
+    },
+    {
+      "input": "5\n00010\n11111\n00110\n11001\n00010",
+      "output": "4"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:35:30.073134"
+}

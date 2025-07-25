@@ -1,0 +1,12 @@
+{
+  "problem_id": "1095",
+  "problem_name": "Exponentiation",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "3\n3 4\n2 8\n123 123",
+      "output": "81\n256\n921450052"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:26:06.214484"
+}

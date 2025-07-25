@@ -1,0 +1,12 @@
+{
+  "problem_id": "3218",
+  "problem_name": "Knight Moves Queries",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "4\n1 1\n2 3\n4 1\n42 1337",
+      "output": "0\n1\n3\n669"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:36:38.312569"
+}

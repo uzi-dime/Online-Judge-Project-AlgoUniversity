@@ -1,0 +1,12 @@
+{
+  "problem_id": "3273",
+  "problem_name": "Colored Chairs",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "R",
+      "output": "B"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:22:39.985022"
+}

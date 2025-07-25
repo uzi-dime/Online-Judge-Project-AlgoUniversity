@@ -1,0 +1,12 @@
+{
+  "problem_id": "1674",
+  "problem_name": "Subordinates",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "5\n1 1 2 3",
+      "output": "4 1 1 0 0"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:32:11.098052"
+}

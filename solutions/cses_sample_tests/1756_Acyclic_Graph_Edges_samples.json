@@ -1,0 +1,12 @@
+{
+  "problem_id": "1756",
+  "problem_name": "Acyclic Graph Edges",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "3 3\n1 2\n2 3\n3 1",
+      "output": "1 2\n3 2\n3 1"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:25:29.534418"
+}

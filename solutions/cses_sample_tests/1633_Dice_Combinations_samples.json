@@ -1,0 +1,12 @@
+{
+  "problem_id": "1633",
+  "problem_name": "Dice Combinations",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "3",
+      "output": "4"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:20:52.407018"
+}

@@ -1,0 +1,12 @@
+{
+  "problem_id": "3413",
+  "problem_name": "Filled Subgrid Count I",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "5 3\nABBBC\nBBBBC\nBCAAA\nAAAAA\nAAAAA",
+      "output": "21\n10\n3"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:29:03.643867"
+}

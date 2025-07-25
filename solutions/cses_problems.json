@@ -1,0 +1,2802 @@
+[
+  {
+    "category": "Introductory Problems",
+    "id": "1068",
+    "name": "Weird Algorithm",
+    "solved_count": "136806 / 143311",
+    "url": "https://cses.fi/problemset/task/1068"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1083",
+    "name": "Missing Number",
+    "solved_count": "117719 / 123617",
+    "url": "https://cses.fi/problemset/task/1083"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1069",
+    "name": "Repetitions",
+    "solved_count": "102724 / 107065",
+    "url": "https://cses.fi/problemset/task/1069"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1094",
+    "name": "Increasing Array",
+    "solved_count": "96388 / 100030",
+    "url": "https://cses.fi/problemset/task/1094"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1070",
+    "name": "Permutations",
+    "solved_count": "84691 / 87395",
+    "url": "https://cses.fi/problemset/task/1070"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1071",
+    "name": "Number Spiral",
+    "solved_count": "59854 / 65336",
+    "url": "https://cses.fi/problemset/task/1071"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1072",
+    "name": "Two Knights",
+    "solved_count": "45598 / 47092",
+    "url": "https://cses.fi/problemset/task/1072"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1092",
+    "name": "Two Sets",
+    "solved_count": "49502 / 53430",
+    "url": "https://cses.fi/problemset/task/1092"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1617",
+    "name": "Bit Strings",
+    "solved_count": "56921 / 60126",
+    "url": "https://cses.fi/problemset/task/1617"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1618",
+    "name": "Trailing Zeros",
+    "solved_count": "53116 / 56598",
+    "url": "https://cses.fi/problemset/task/1618"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1754",
+    "name": "Coin Piles",
+    "solved_count": "47032 / 51603",
+    "url": "https://cses.fi/problemset/task/1754"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1755",
+    "name": "Palindrome Reorder",
+    "solved_count": "43548 / 46045",
+    "url": "https://cses.fi/problemset/task/1755"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "2205",
+    "name": "Gray Code",
+    "solved_count": "28738 / 32461",
+    "url": "https://cses.fi/problemset/task/2205"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "2165",
+    "name": "Tower of Hanoi",
+    "solved_count": "26603 / 27675",
+    "url": "https://cses.fi/problemset/task/2165"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1622",
+    "name": "Creating Strings",
+    "solved_count": "36964 / 37960",
+    "url": "https://cses.fi/problemset/task/1622"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1623",
+    "name": "Apple Division",
+    "solved_count": "36815 / 41745",
+    "url": "https://cses.fi/problemset/task/1623"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1624",
+    "name": "Chessboard and Queens",
+    "solved_count": "22110 / 22536",
+    "url": "https://cses.fi/problemset/task/1624"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "3399",
+    "name": "Raab Game I",
+    "solved_count": "1758 / 2017",
+    "url": "https://cses.fi/problemset/task/3399"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "3419",
+    "name": "Mex Grid Construction",
+    "solved_count": "1701 / 1810",
+    "url": "https://cses.fi/problemset/task/3419"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "3217",
+    "name": "Knight Moves Grid",
+    "solved_count": "1752 / 1786",
+    "url": "https://cses.fi/problemset/task/3217"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "3311",
+    "name": "Grid Coloring I",
+    "solved_count": "1381 / 1432",
+    "url": "https://cses.fi/problemset/task/3311"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "2431",
+    "name": "Digit Queries",
+    "solved_count": "15609 / 18375",
+    "url": "https://cses.fi/problemset/task/2431"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1743",
+    "name": "String Reorder",
+    "solved_count": "1586 / 1852",
+    "url": "https://cses.fi/problemset/task/1743"
+  },
+  {
+    "category": "Introductory Problems",
+    "id": "1625",
+    "name": "Grid Path Description",
+    "solved_count": "8811 / 11497",
+    "url": "https://cses.fi/problemset/task/1625"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1621",
+    "name": "Distinct Numbers",
+    "solved_count": "66435 / 72025",
+    "url": "https://cses.fi/problemset/task/1621"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1084",
+    "name": "Apartments",
+    "solved_count": "49074 / 54827",
+    "url": "https://cses.fi/problemset/task/1084"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1090",
+    "name": "Ferris Wheel",
+    "solved_count": "47084 / 51055",
+    "url": "https://cses.fi/problemset/task/1090"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1091",
+    "name": "Concert Tickets",
+    "solved_count": "37923 / 44434",
+    "url": "https://cses.fi/problemset/task/1091"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1619",
+    "name": "Restaurant Customers",
+    "solved_count": "38696 / 41892",
+    "url": "https://cses.fi/problemset/task/1619"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1629",
+    "name": "Movie Festival",
+    "solved_count": "36998 / 39290",
+    "url": "https://cses.fi/problemset/task/1629"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1640",
+    "name": "Sum of Two Values",
+    "solved_count": "43247 / 48693",
+    "url": "https://cses.fi/problemset/task/1640"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1643",
+    "name": "Maximum Subarray Sum",
+    "solved_count": "42094 / 44043",
+    "url": "https://cses.fi/problemset/task/1643"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1074",
+    "name": "Stick Lengths",
+    "solved_count": "37539 / 39376",
+    "url": "https://cses.fi/problemset/task/1074"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2183",
+    "name": "Missing Coin Sum",
+    "solved_count": "27908 / 28978",
+    "url": "https://cses.fi/problemset/task/2183"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2216",
+    "name": "Collecting Numbers",
+    "solved_count": "28591 / 30742",
+    "url": "https://cses.fi/problemset/task/2216"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2217",
+    "name": "Collecting Numbers II",
+    "solved_count": "11692 / 15096",
+    "url": "https://cses.fi/problemset/task/2217"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1141",
+    "name": "Playlist",
+    "solved_count": "28669 / 32996",
+    "url": "https://cses.fi/problemset/task/1141"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1073",
+    "name": "Towers",
+    "solved_count": "29186 / 31359",
+    "url": "https://cses.fi/problemset/task/1073"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1163",
+    "name": "Traffic Lights",
+    "solved_count": "22533 / 25353",
+    "url": "https://cses.fi/problemset/task/1163"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "3420",
+    "name": "Distinct Values Subarrays",
+    "solved_count": "2592 / 2725",
+    "url": "https://cses.fi/problemset/task/3420"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "3421",
+    "name": "Distinct Values Subsequences",
+    "solved_count": "1829 / 2037",
+    "url": "https://cses.fi/problemset/task/3421"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2162",
+    "name": "Josephus Problem I",
+    "solved_count": "16937 / 18819",
+    "url": "https://cses.fi/problemset/task/2162"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2163",
+    "name": "Josephus Problem II",
+    "solved_count": "9207 / 12644",
+    "url": "https://cses.fi/problemset/task/2163"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2168",
+    "name": "Nested Ranges Check",
+    "solved_count": "9657 / 11209",
+    "url": "https://cses.fi/problemset/task/2168"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2169",
+    "name": "Nested Ranges Count",
+    "solved_count": "6615 / 7824",
+    "url": "https://cses.fi/problemset/task/2169"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1164",
+    "name": "Room Allocation",
+    "solved_count": "16938 / 19554",
+    "url": "https://cses.fi/problemset/task/1164"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1620",
+    "name": "Factory Machines",
+    "solved_count": "23866 / 26169",
+    "url": "https://cses.fi/problemset/task/1620"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1630",
+    "name": "Tasks and Deadlines",
+    "solved_count": "19446 / 19879",
+    "url": "https://cses.fi/problemset/task/1630"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1631",
+    "name": "Reading Books",
+    "solved_count": "15736 / 16869",
+    "url": "https://cses.fi/problemset/task/1631"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1641",
+    "name": "Sum of Three Values",
+    "solved_count": "23136 / 25778",
+    "url": "https://cses.fi/problemset/task/1641"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1642",
+    "name": "Sum of Four Values",
+    "solved_count": "14365 / 16137",
+    "url": "https://cses.fi/problemset/task/1642"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1645",
+    "name": "Nearest Smaller Values",
+    "solved_count": "19223 / 19897",
+    "url": "https://cses.fi/problemset/task/1645"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1660",
+    "name": "Subarray Sums I",
+    "solved_count": "25296 / 27122",
+    "url": "https://cses.fi/problemset/task/1660"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1661",
+    "name": "Subarray Sums II",
+    "solved_count": "22743 / 27323",
+    "url": "https://cses.fi/problemset/task/1661"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1662",
+    "name": "Subarray Divisibility",
+    "solved_count": "21031 / 23050",
+    "url": "https://cses.fi/problemset/task/1662"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "2428",
+    "name": "Distinct Values Subarrays II",
+    "solved_count": "12264 / 13693",
+    "url": "https://cses.fi/problemset/task/2428"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1085",
+    "name": "Array Division",
+    "solved_count": "19897 / 20992",
+    "url": "https://cses.fi/problemset/task/1085"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1632",
+    "name": "Movie Festival II",
+    "solved_count": "10522 / 12800",
+    "url": "https://cses.fi/problemset/task/1632"
+  },
+  {
+    "category": "Sorting and Searching",
+    "id": "1644",
+    "name": "Maximum Subarray Sum II",
+    "solved_count": "9701 / 11659",
+    "url": "https://cses.fi/problemset/task/1644"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1633",
+    "name": "Dice Combinations",
+    "solved_count": "68848 / 72986",
+    "url": "https://cses.fi/problemset/task/1633"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1634",
+    "name": "Minimizing Coins",
+    "solved_count": "59443 / 64026",
+    "url": "https://cses.fi/problemset/task/1634"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1635",
+    "name": "Coin Combinations I",
+    "solved_count": "54283 / 58941",
+    "url": "https://cses.fi/problemset/task/1635"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1636",
+    "name": "Coin Combinations II",
+    "solved_count": "45874 / 52167",
+    "url": "https://cses.fi/problemset/task/1636"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1637",
+    "name": "Removing Digits",
+    "solved_count": "51107 / 52217",
+    "url": "https://cses.fi/problemset/task/1637"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1638",
+    "name": "Grid Paths I",
+    "solved_count": "48118 / 49550",
+    "url": "https://cses.fi/problemset/task/1638"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1158",
+    "name": "Book Shop",
+    "solved_count": "42802 / 47348",
+    "url": "https://cses.fi/problemset/task/1158"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1746",
+    "name": "Array Description",
+    "solved_count": "31314 / 34998",
+    "url": "https://cses.fi/problemset/task/1746"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "2413",
+    "name": "Counting Towers",
+    "solved_count": "18779 / 19935",
+    "url": "https://cses.fi/problemset/task/2413"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1639",
+    "name": "Edit Distance",
+    "solved_count": "31761 / 33596",
+    "url": "https://cses.fi/problemset/task/1639"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "3403",
+    "name": "Longest Common Subsequence",
+    "solved_count": "3542 / 3683",
+    "url": "https://cses.fi/problemset/task/3403"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1744",
+    "name": "Rectangle Cutting",
+    "solved_count": "26420 / 28907",
+    "url": "https://cses.fi/problemset/task/1744"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "3359",
+    "name": "Minimal Grid Path",
+    "solved_count": "1516 / 2925",
+    "url": "https://cses.fi/problemset/task/3359"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1745",
+    "name": "Money Sums",
+    "solved_count": "31439 / 32702",
+    "url": "https://cses.fi/problemset/task/1745"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1097",
+    "name": "Removal Game",
+    "solved_count": "17870 / 25122",
+    "url": "https://cses.fi/problemset/task/1097"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1093",
+    "name": "Two Sets II",
+    "solved_count": "24761 / 26811",
+    "url": "https://cses.fi/problemset/task/1093"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "3314",
+    "name": "Mountain Range",
+    "solved_count": "1048 / 2029",
+    "url": "https://cses.fi/problemset/task/3314"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1145",
+    "name": "Increasing Subsequence",
+    "solved_count": "25376 / 28589",
+    "url": "https://cses.fi/problemset/task/1145"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1140",
+    "name": "Projects",
+    "solved_count": "17368 / 19528",
+    "url": "https://cses.fi/problemset/task/1140"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1653",
+    "name": "Elevator Rides",
+    "solved_count": "10897 / 13870",
+    "url": "https://cses.fi/problemset/task/1653"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "2181",
+    "name": "Counting Tilings",
+    "solved_count": "6310 / 6926",
+    "url": "https://cses.fi/problemset/task/2181"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "2220",
+    "name": "Counting Numbers",
+    "solved_count": "8507 / 9702",
+    "url": "https://cses.fi/problemset/task/2220"
+  },
+  {
+    "category": "Dynamic Programming",
+    "id": "1748",
+    "name": "Increasing Subsequence II",
+    "solved_count": "2781 / 3157",
+    "url": "https://cses.fi/problemset/task/1748"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1192",
+    "name": "Counting Rooms",
+    "solved_count": "47137 / 49700",
+    "url": "https://cses.fi/problemset/task/1192"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1193",
+    "name": "Labyrinth",
+    "solved_count": "32284 / 39193",
+    "url": "https://cses.fi/problemset/task/1193"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1666",
+    "name": "Building Roads",
+    "solved_count": "41238 / 42802",
+    "url": "https://cses.fi/problemset/task/1666"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1667",
+    "name": "Message Route",
+    "solved_count": "35186 / 36693",
+    "url": "https://cses.fi/problemset/task/1667"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1668",
+    "name": "Building Teams",
+    "solved_count": "33293 / 35265",
+    "url": "https://cses.fi/problemset/task/1668"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1669",
+    "name": "Round Trip",
+    "solved_count": "26316 / 28840",
+    "url": "https://cses.fi/problemset/task/1669"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1194",
+    "name": "Monsters",
+    "solved_count": "17634 / 21148",
+    "url": "https://cses.fi/problemset/task/1194"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1671",
+    "name": "Shortest Routes I",
+    "solved_count": "28648 / 31954",
+    "url": "https://cses.fi/problemset/task/1671"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1672",
+    "name": "Shortest Routes II",
+    "solved_count": "23228 / 26283",
+    "url": "https://cses.fi/problemset/task/1672"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1673",
+    "name": "High Score",
+    "solved_count": "13674 / 20099",
+    "url": "https://cses.fi/problemset/task/1673"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1195",
+    "name": "Flight Discount",
+    "solved_count": "18080 / 21431",
+    "url": "https://cses.fi/problemset/task/1195"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1197",
+    "name": "Cycle Finding",
+    "solved_count": "12816 / 15992",
+    "url": "https://cses.fi/problemset/task/1197"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1196",
+    "name": "Flight Routes",
+    "solved_count": "12383 / 13895",
+    "url": "https://cses.fi/problemset/task/1196"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1678",
+    "name": "Round Trip II",
+    "solved_count": "14351 / 16258",
+    "url": "https://cses.fi/problemset/task/1678"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1679",
+    "name": "Course Schedule",
+    "solved_count": "18988 / 20202",
+    "url": "https://cses.fi/problemset/task/1679"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1680",
+    "name": "Longest Flight Route",
+    "solved_count": "12958 / 16500",
+    "url": "https://cses.fi/problemset/task/1680"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1681",
+    "name": "Game Routes",
+    "solved_count": "14783 / 15973",
+    "url": "https://cses.fi/problemset/task/1681"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1202",
+    "name": "Investigation",
+    "solved_count": "10909 / 11781",
+    "url": "https://cses.fi/problemset/task/1202"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1750",
+    "name": "Planets Queries I",
+    "solved_count": "9437 / 11160",
+    "url": "https://cses.fi/problemset/task/1750"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1160",
+    "name": "Planets Queries II",
+    "solved_count": "3371 / 4293",
+    "url": "https://cses.fi/problemset/task/1160"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1751",
+    "name": "Planets Cycles",
+    "solved_count": "5820 / 6539",
+    "url": "https://cses.fi/problemset/task/1751"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1675",
+    "name": "Road Reparation",
+    "solved_count": "14502 / 15155",
+    "url": "https://cses.fi/problemset/task/1675"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1676",
+    "name": "Road Construction",
+    "solved_count": "15737 / 16269",
+    "url": "https://cses.fi/problemset/task/1676"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1682",
+    "name": "Flight Routes Check",
+    "solved_count": "12900 / 14070",
+    "url": "https://cses.fi/problemset/task/1682"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1683",
+    "name": "Planets and Kingdoms",
+    "solved_count": "10316 / 10701",
+    "url": "https://cses.fi/problemset/task/1683"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1684",
+    "name": "Giant Pizza",
+    "solved_count": "4230 / 4685",
+    "url": "https://cses.fi/problemset/task/1684"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1686",
+    "name": "Coin Collector",
+    "solved_count": "6601 / 7395",
+    "url": "https://cses.fi/problemset/task/1686"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1691",
+    "name": "Mail Delivery",
+    "solved_count": "5596 / 6149",
+    "url": "https://cses.fi/problemset/task/1691"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1692",
+    "name": "De Bruijn Sequence",
+    "solved_count": "2923 / 3069",
+    "url": "https://cses.fi/problemset/task/1692"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1693",
+    "name": "Teleporters Path",
+    "solved_count": "4194 / 4880",
+    "url": "https://cses.fi/problemset/task/1693"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1690",
+    "name": "Hamiltonian Flights",
+    "solved_count": "6350 / 7280",
+    "url": "https://cses.fi/problemset/task/1690"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1689",
+    "name": "Knight's Tour",
+    "solved_count": "2368 / 2896",
+    "url": "https://cses.fi/problemset/task/1689"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1694",
+    "name": "Download Speed",
+    "solved_count": "4182 / 5784",
+    "url": "https://cses.fi/problemset/task/1694"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1695",
+    "name": "Police Chase",
+    "solved_count": "3370 / 3816",
+    "url": "https://cses.fi/problemset/task/1695"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1696",
+    "name": "School Dance",
+    "solved_count": "3698 / 3935",
+    "url": "https://cses.fi/problemset/task/1696"
+  },
+  {
+    "category": "Graph Algorithms",
+    "id": "1711",
+    "name": "Distinct Routes",
+    "solved_count": "2529 / 3358",
+    "url": "https://cses.fi/problemset/task/1711"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1646",
+    "name": "Static Range Sum Queries",
+    "solved_count": "32498 / 34003",
+    "url": "https://cses.fi/problemset/task/1646"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1647",
+    "name": "Static Range Minimum Queries",
+    "solved_count": "22957 / 24641",
+    "url": "https://cses.fi/problemset/task/1647"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1648",
+    "name": "Dynamic Range Sum Queries",
+    "solved_count": "23825 / 24937",
+    "url": "https://cses.fi/problemset/task/1648"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1649",
+    "name": "Dynamic Range Minimum Queries",
+    "solved_count": "21677 / 22220",
+    "url": "https://cses.fi/problemset/task/1649"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1650",
+    "name": "Range Xor Queries",
+    "solved_count": "22425 / 22746",
+    "url": "https://cses.fi/problemset/task/1650"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1651",
+    "name": "Range Update Queries",
+    "solved_count": "17655 / 19016",
+    "url": "https://cses.fi/problemset/task/1651"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1652",
+    "name": "Forest Queries",
+    "solved_count": "18035 / 18755",
+    "url": "https://cses.fi/problemset/task/1652"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1143",
+    "name": "Hotel Queries",
+    "solved_count": "12656 / 13529",
+    "url": "https://cses.fi/problemset/task/1143"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1749",
+    "name": "List Removals",
+    "solved_count": "10561 / 11158",
+    "url": "https://cses.fi/problemset/task/1749"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1144",
+    "name": "Salary Queries",
+    "solved_count": "7676 / 9877",
+    "url": "https://cses.fi/problemset/task/1144"
+  },
+  {
+    "category": "Range Queries",
+    "id": "2166",
+    "name": "Prefix Sum Queries",
+    "solved_count": "6617 / 7225",
+    "url": "https://cses.fi/problemset/task/2166"
+  },
+  {
+    "category": "Range Queries",
+    "id": "2206",
+    "name": "Pizzeria Queries",
+    "solved_count": "5319 / 5543",
+    "url": "https://cses.fi/problemset/task/2206"
+  },
+  {
+    "category": "Range Queries",
+    "id": "3304",
+    "name": "Visible Buildings Queries",
+    "solved_count": "617 / 680",
+    "url": "https://cses.fi/problemset/task/3304"
+  },
+  {
+    "category": "Range Queries",
+    "id": "3163",
+    "name": "Range Interval Queries",
+    "solved_count": "493 / 642",
+    "url": "https://cses.fi/problemset/task/3163"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1190",
+    "name": "Subarray Sum Queries",
+    "solved_count": "6578 / 7190",
+    "url": "https://cses.fi/problemset/task/1190"
+  },
+  {
+    "category": "Range Queries",
+    "id": "3226",
+    "name": "Subarray Sum Queries II",
+    "solved_count": "653 / 680",
+    "url": "https://cses.fi/problemset/task/3226"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1734",
+    "name": "Distinct Values Queries",
+    "solved_count": "5923 / 7456",
+    "url": "https://cses.fi/problemset/task/1734"
+  },
+  {
+    "category": "Range Queries",
+    "id": "3356",
+    "name": "Distinct Values Queries II",
+    "solved_count": "398 / 460",
+    "url": "https://cses.fi/problemset/task/3356"
+  },
+  {
+    "category": "Range Queries",
+    "id": "2416",
+    "name": "Increasing Array Queries",
+    "solved_count": "2298 / 2648",
+    "url": "https://cses.fi/problemset/task/2416"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1664",
+    "name": "Movie Festival Queries",
+    "solved_count": "1020 / 1140",
+    "url": "https://cses.fi/problemset/task/1664"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1739",
+    "name": "Forest Queries II",
+    "solved_count": "3987 / 4307",
+    "url": "https://cses.fi/problemset/task/1739"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1735",
+    "name": "Range Updates and Sums",
+    "solved_count": "5184 / 6244",
+    "url": "https://cses.fi/problemset/task/1735"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1736",
+    "name": "Polynomial Queries",
+    "solved_count": "3848 / 4538",
+    "url": "https://cses.fi/problemset/task/1736"
+  },
+  {
+    "category": "Range Queries",
+    "id": "1737",
+    "name": "Range Queries and Copies",
+    "solved_count": "2738 / 2954",
+    "url": "https://cses.fi/problemset/task/1737"
+  },
+  {
+    "category": "Range Queries",
+    "id": "2184",
+    "name": "Missing Coin Sum Queries",
+    "solved_count": "456 / 625",
+    "url": "https://cses.fi/problemset/task/2184"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1674",
+    "name": "Subordinates",
+    "solved_count": "27205 / 29186",
+    "url": "https://cses.fi/problemset/task/1674"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1130",
+    "name": "Tree Matching",
+    "solved_count": "15283 / 17907",
+    "url": "https://cses.fi/problemset/task/1130"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1131",
+    "name": "Tree Diameter",
+    "solved_count": "22146 / 23557",
+    "url": "https://cses.fi/problemset/task/1131"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1132",
+    "name": "Tree Distances I",
+    "solved_count": "16709 / 18034",
+    "url": "https://cses.fi/problemset/task/1132"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1133",
+    "name": "Tree Distances II",
+    "solved_count": "13756 / 14354",
+    "url": "https://cses.fi/problemset/task/1133"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1687",
+    "name": "Company Queries I",
+    "solved_count": "15257 / 16100",
+    "url": "https://cses.fi/problemset/task/1687"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1688",
+    "name": "Company Queries II",
+    "solved_count": "14286 / 15019",
+    "url": "https://cses.fi/problemset/task/1688"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1135",
+    "name": "Distance Queries",
+    "solved_count": "13054 / 14050",
+    "url": "https://cses.fi/problemset/task/1135"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1136",
+    "name": "Counting Paths",
+    "solved_count": "8026 / 8552",
+    "url": "https://cses.fi/problemset/task/1136"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1137",
+    "name": "Subtree Queries",
+    "solved_count": "9738 / 10415",
+    "url": "https://cses.fi/problemset/task/1137"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1138",
+    "name": "Path Queries",
+    "solved_count": "7772 / 8257",
+    "url": "https://cses.fi/problemset/task/1138"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "2134",
+    "name": "Path Queries II",
+    "solved_count": "3040 / 4690",
+    "url": "https://cses.fi/problemset/task/2134"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "1139",
+    "name": "Distinct Colors",
+    "solved_count": "7461 / 8282",
+    "url": "https://cses.fi/problemset/task/1139"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "2079",
+    "name": "Finding a Centroid",
+    "solved_count": "6089 / 6354",
+    "url": "https://cses.fi/problemset/task/2079"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "2080",
+    "name": "Fixed-Length Paths I",
+    "solved_count": "2825 / 3718",
+    "url": "https://cses.fi/problemset/task/2080"
+  },
+  {
+    "category": "Tree Algorithms",
+    "id": "2081",
+    "name": "Fixed-Length Paths II",
+    "solved_count": "1290 / 2474",
+    "url": "https://cses.fi/problemset/task/2081"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2164",
+    "name": "Josephus Queries",
+    "solved_count": "4101 / 5166",
+    "url": "https://cses.fi/problemset/task/2164"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1095",
+    "name": "Exponentiation",
+    "solved_count": "21650 / 23171",
+    "url": "https://cses.fi/problemset/task/1095"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1712",
+    "name": "Exponentiation II",
+    "solved_count": "15389 / 18558",
+    "url": "https://cses.fi/problemset/task/1712"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1713",
+    "name": "Counting Divisors",
+    "solved_count": "19618 / 22226",
+    "url": "https://cses.fi/problemset/task/1713"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1081",
+    "name": "Common Divisors",
+    "solved_count": "12877 / 15086",
+    "url": "https://cses.fi/problemset/task/1081"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1082",
+    "name": "Sum of Divisors",
+    "solved_count": "7107 / 10839",
+    "url": "https://cses.fi/problemset/task/1082"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2182",
+    "name": "Divisor Analysis",
+    "solved_count": "4837 / 6521",
+    "url": "https://cses.fi/problemset/task/2182"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2185",
+    "name": "Prime Multiples",
+    "solved_count": "5463 / 6451",
+    "url": "https://cses.fi/problemset/task/2185"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2417",
+    "name": "Counting Coprime Pairs",
+    "solved_count": "3549 / 4183",
+    "url": "https://cses.fi/problemset/task/2417"
+  },
+  {
+    "category": "Mathematics",
+    "id": "3396",
+    "name": "Next Prime",
+    "solved_count": "754 / 856",
+    "url": "https://cses.fi/problemset/task/3396"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1079",
+    "name": "Binomial Coefficients",
+    "solved_count": "9000 / 10046",
+    "url": "https://cses.fi/problemset/task/1079"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1715",
+    "name": "Creating Strings II",
+    "solved_count": "7646 / 8111",
+    "url": "https://cses.fi/problemset/task/1715"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1716",
+    "name": "Distributing Apples",
+    "solved_count": "7382 / 7968",
+    "url": "https://cses.fi/problemset/task/1716"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1717",
+    "name": "Christmas Party",
+    "solved_count": "5826 / 6290",
+    "url": "https://cses.fi/problemset/task/1717"
+  },
+  {
+    "category": "Mathematics",
+    "id": "3397",
+    "name": "Permutation Order",
+    "solved_count": "344 / 351",
+    "url": "https://cses.fi/problemset/task/3397"
+  },
+  {
+    "category": "Mathematics",
+    "id": "3398",
+    "name": "Permutation Rounds",
+    "solved_count": "350 / 398",
+    "url": "https://cses.fi/problemset/task/3398"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2064",
+    "name": "Bracket Sequences I",
+    "solved_count": "4030 / 4410",
+    "url": "https://cses.fi/problemset/task/2064"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2187",
+    "name": "Bracket Sequences II",
+    "solved_count": "2092 / 2421",
+    "url": "https://cses.fi/problemset/task/2187"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2209",
+    "name": "Counting Necklaces",
+    "solved_count": "1916 / 2088",
+    "url": "https://cses.fi/problemset/task/2209"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2210",
+    "name": "Counting Grids",
+    "solved_count": "1558 / 1674",
+    "url": "https://cses.fi/problemset/task/2210"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1722",
+    "name": "Fibonacci Numbers",
+    "solved_count": "6338 / 8012",
+    "url": "https://cses.fi/problemset/task/1722"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1096",
+    "name": "Throwing Dice",
+    "solved_count": "3272 / 3568",
+    "url": "https://cses.fi/problemset/task/1096"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1723",
+    "name": "Graph Paths I",
+    "solved_count": "3099 / 3330",
+    "url": "https://cses.fi/problemset/task/1723"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1724",
+    "name": "Graph Paths II",
+    "solved_count": "2599 / 2726",
+    "url": "https://cses.fi/problemset/task/1724"
+  },
+  {
+    "category": "Mathematics",
+    "id": "3154",
+    "name": "System of Linear Equations",
+    "solved_count": "170 / 189",
+    "url": "https://cses.fi/problemset/task/3154"
+  },
+  {
+    "category": "Mathematics",
+    "id": "3355",
+    "name": "Sum of Four Squares",
+    "solved_count": "285 / 329",
+    "url": "https://cses.fi/problemset/task/3355"
+  },
+  {
+    "category": "Mathematics",
+    "id": "3406",
+    "name": "Triangle Number Sums",
+    "solved_count": "231 / 290",
+    "url": "https://cses.fi/problemset/task/3406"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1725",
+    "name": "Dice Probability",
+    "solved_count": "2810 / 3044",
+    "url": "https://cses.fi/problemset/task/1725"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1726",
+    "name": "Moving Robots",
+    "solved_count": "1432 / 1522",
+    "url": "https://cses.fi/problemset/task/1726"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1727",
+    "name": "Candy Lottery",
+    "solved_count": "1055 / 2605",
+    "url": "https://cses.fi/problemset/task/1727"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1728",
+    "name": "Inversion Probability",
+    "solved_count": "352 / 2018",
+    "url": "https://cses.fi/problemset/task/1728"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1729",
+    "name": "Stick Game",
+    "solved_count": "3133 / 3209",
+    "url": "https://cses.fi/problemset/task/1729"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1730",
+    "name": "Nim Game I",
+    "solved_count": "4142 / 4308",
+    "url": "https://cses.fi/problemset/task/1730"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1098",
+    "name": "Nim Game II",
+    "solved_count": "3292 / 3437",
+    "url": "https://cses.fi/problemset/task/1098"
+  },
+  {
+    "category": "Mathematics",
+    "id": "1099",
+    "name": "Stair Game",
+    "solved_count": "2218 / 2419",
+    "url": "https://cses.fi/problemset/task/1099"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2207",
+    "name": "Grundy's Game",
+    "solved_count": "1503 / 1978",
+    "url": "https://cses.fi/problemset/task/2207"
+  },
+  {
+    "category": "Mathematics",
+    "id": "2208",
+    "name": "Another Game",
+    "solved_count": "1715 / 1857",
+    "url": "https://cses.fi/problemset/task/2208"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1731",
+    "name": "Word Combinations",
+    "solved_count": "5096 / 7521",
+    "url": "https://cses.fi/problemset/task/1731"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1753",
+    "name": "String Matching",
+    "solved_count": "10087 / 13703",
+    "url": "https://cses.fi/problemset/task/1753"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1732",
+    "name": "Finding Borders",
+    "solved_count": "7380 / 8102",
+    "url": "https://cses.fi/problemset/task/1732"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1733",
+    "name": "Finding Periods",
+    "solved_count": "5241 / 5972",
+    "url": "https://cses.fi/problemset/task/1733"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1110",
+    "name": "Minimal Rotation",
+    "solved_count": "2518 / 3939",
+    "url": "https://cses.fi/problemset/task/1110"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1111",
+    "name": "Longest Palindrome",
+    "solved_count": "3847 / 5143",
+    "url": "https://cses.fi/problemset/task/1111"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "3138",
+    "name": "All Palindromes",
+    "solved_count": "242 / 271",
+    "url": "https://cses.fi/problemset/task/3138"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1112",
+    "name": "Required Substring",
+    "solved_count": "1433 / 2250",
+    "url": "https://cses.fi/problemset/task/1112"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2420",
+    "name": "Palindrome Queries",
+    "solved_count": "1822 / 2139",
+    "url": "https://cses.fi/problemset/task/2420"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2102",
+    "name": "Finding Patterns",
+    "solved_count": "1655 / 2386",
+    "url": "https://cses.fi/problemset/task/2102"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2103",
+    "name": "Counting Patterns",
+    "solved_count": "1557 / 1953",
+    "url": "https://cses.fi/problemset/task/2103"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2104",
+    "name": "Pattern Positions",
+    "solved_count": "1308 / 1611",
+    "url": "https://cses.fi/problemset/task/2104"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2105",
+    "name": "Distinct Substrings",
+    "solved_count": "1505 / 1809",
+    "url": "https://cses.fi/problemset/task/2105"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1149",
+    "name": "Distinct Subsequences",
+    "solved_count": "908 / 973",
+    "url": "https://cses.fi/problemset/task/1149"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2106",
+    "name": "Repeating Substring",
+    "solved_count": "1702 / 1909",
+    "url": "https://cses.fi/problemset/task/2106"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2107",
+    "name": "String Functions",
+    "solved_count": "1445 / 1517",
+    "url": "https://cses.fi/problemset/task/2107"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "3225",
+    "name": "Inverse Suffix Array",
+    "solved_count": "89 / 99",
+    "url": "https://cses.fi/problemset/task/3225"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "1113",
+    "name": "String Transform",
+    "solved_count": "452 / 557",
+    "url": "https://cses.fi/problemset/task/1113"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2108",
+    "name": "Substring Order I",
+    "solved_count": "1023 / 1159",
+    "url": "https://cses.fi/problemset/task/2108"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2109",
+    "name": "Substring Order II",
+    "solved_count": "678 / 879",
+    "url": "https://cses.fi/problemset/task/2109"
+  },
+  {
+    "category": "String Algorithms",
+    "id": "2110",
+    "name": "Substring Distribution",
+    "solved_count": "950 / 1040",
+    "url": "https://cses.fi/problemset/task/2110"
+  },
+  {
+    "category": "Geometry",
+    "id": "2189",
+    "name": "Point Location Test",
+    "solved_count": "6456 / 7247",
+    "url": "https://cses.fi/problemset/task/2189"
+  },
+  {
+    "category": "Geometry",
+    "id": "2190",
+    "name": "Line Segment Intersection",
+    "solved_count": "3852 / 4899",
+    "url": "https://cses.fi/problemset/task/2190"
+  },
+  {
+    "category": "Geometry",
+    "id": "2191",
+    "name": "Polygon Area",
+    "solved_count": "4494 / 4782",
+    "url": "https://cses.fi/problemset/task/2191"
+  },
+  {
+    "category": "Geometry",
+    "id": "2192",
+    "name": "Point in Polygon",
+    "solved_count": "2433 / 3126",
+    "url": "https://cses.fi/problemset/task/2192"
+  },
+  {
+    "category": "Geometry",
+    "id": "2193",
+    "name": "Polygon Lattice Points",
+    "solved_count": "2085 / 2165",
+    "url": "https://cses.fi/problemset/task/2193"
+  },
+  {
+    "category": "Geometry",
+    "id": "2194",
+    "name": "Minimum Euclidean Distance",
+    "solved_count": "1798 / 2536",
+    "url": "https://cses.fi/problemset/task/2194"
+  },
+  {
+    "category": "Geometry",
+    "id": "2195",
+    "name": "Convex Hull",
+    "solved_count": "2996 / 3606",
+    "url": "https://cses.fi/problemset/task/2195"
+  },
+  {
+    "category": "Geometry",
+    "id": "3410",
+    "name": "Maximum Manhattan Distances",
+    "solved_count": "236 / 242",
+    "url": "https://cses.fi/problemset/task/3410"
+  },
+  {
+    "category": "Geometry",
+    "id": "3411",
+    "name": "All Manhattan Distances",
+    "solved_count": "249 / 274",
+    "url": "https://cses.fi/problemset/task/3411"
+  },
+  {
+    "category": "Geometry",
+    "id": "1740",
+    "name": "Intersection Points",
+    "solved_count": "1699 / 1835",
+    "url": "https://cses.fi/problemset/task/1740"
+  },
+  {
+    "category": "Geometry",
+    "id": "3427",
+    "name": "Line Segments Trace I",
+    "solved_count": "133 / 136",
+    "url": "https://cses.fi/problemset/task/3427"
+  },
+  {
+    "category": "Geometry",
+    "id": "3428",
+    "name": "Line Segments Trace II",
+    "solved_count": "97 / 102",
+    "url": "https://cses.fi/problemset/task/3428"
+  },
+  {
+    "category": "Geometry",
+    "id": "3429",
+    "name": "Lines and Queries I",
+    "solved_count": "143 / 152",
+    "url": "https://cses.fi/problemset/task/3429"
+  },
+  {
+    "category": "Geometry",
+    "id": "3430",
+    "name": "Lines and Queries II",
+    "solved_count": "116 / 121",
+    "url": "https://cses.fi/problemset/task/3430"
+  },
+  {
+    "category": "Geometry",
+    "id": "1741",
+    "name": "Area of Rectangles",
+    "solved_count": "976 / 1093",
+    "url": "https://cses.fi/problemset/task/1741"
+  },
+  {
+    "category": "Geometry",
+    "id": "1742",
+    "name": "Robot Path",
+    "solved_count": "261 / 461",
+    "url": "https://cses.fi/problemset/task/1742"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "1628",
+    "name": "Meet in the Middle",
+    "solved_count": "5919 / 8425",
+    "url": "https://cses.fi/problemset/task/1628"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2136",
+    "name": "Hamming Distance",
+    "solved_count": "2940 / 3197",
+    "url": "https://cses.fi/problemset/task/2136"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "3360",
+    "name": "Corner Subgrid Check",
+    "solved_count": "166 / 234",
+    "url": "https://cses.fi/problemset/task/3360"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2137",
+    "name": "Corner Subgrid Count",
+    "solved_count": "2074 / 2323",
+    "url": "https://cses.fi/problemset/task/2137"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2138",
+    "name": "Reachable Nodes",
+    "solved_count": "2029 / 2194",
+    "url": "https://cses.fi/problemset/task/2138"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2143",
+    "name": "Reachability Queries",
+    "solved_count": "1361 / 1619",
+    "url": "https://cses.fi/problemset/task/2143"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2072",
+    "name": "Cut and Paste",
+    "solved_count": "1339 / 1499",
+    "url": "https://cses.fi/problemset/task/2072"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2073",
+    "name": "Substring Reversals",
+    "solved_count": "1168 / 1280",
+    "url": "https://cses.fi/problemset/task/2073"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2074",
+    "name": "Reversals and Sums",
+    "solved_count": "1178 / 1279",
+    "url": "https://cses.fi/problemset/task/2074"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2076",
+    "name": "Necessary Roads",
+    "solved_count": "1711 / 1755",
+    "url": "https://cses.fi/problemset/task/2076"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2077",
+    "name": "Necessary Cities",
+    "solved_count": "1592 / 1675",
+    "url": "https://cses.fi/problemset/task/2077"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2078",
+    "name": "Eulerian Subgraphs",
+    "solved_count": "714 / 754",
+    "url": "https://cses.fi/problemset/task/2078"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2084",
+    "name": "Monster Game I",
+    "solved_count": "1028 / 1142",
+    "url": "https://cses.fi/problemset/task/2084"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2085",
+    "name": "Monster Game II",
+    "solved_count": "914 / 987",
+    "url": "https://cses.fi/problemset/task/2085"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2086",
+    "name": "Subarray Squares",
+    "solved_count": "1191 / 1428",
+    "url": "https://cses.fi/problemset/task/2086"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2087",
+    "name": "Houses and Schools",
+    "solved_count": "668 / 806",
+    "url": "https://cses.fi/problemset/task/2087"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2088",
+    "name": "Knuth Division",
+    "solved_count": "798 / 911",
+    "url": "https://cses.fi/problemset/task/2088"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2111",
+    "name": "Apples and Bananas",
+    "solved_count": "864 / 947",
+    "url": "https://cses.fi/problemset/task/2111"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2112",
+    "name": "One Bit Positions",
+    "solved_count": "716 / 791",
+    "url": "https://cses.fi/problemset/task/2112"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2113",
+    "name": "Signal Processing",
+    "solved_count": "655 / 711",
+    "url": "https://cses.fi/problemset/task/2113"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2101",
+    "name": "New Roads Queries",
+    "solved_count": "1910 / 2342",
+    "url": "https://cses.fi/problemset/task/2101"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2133",
+    "name": "Dynamic Connectivity",
+    "solved_count": "863 / 981",
+    "url": "https://cses.fi/problemset/task/2133"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2121",
+    "name": "Parcel Delivery",
+    "solved_count": "647 / 727",
+    "url": "https://cses.fi/problemset/task/2121"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2129",
+    "name": "Task Assignment",
+    "solved_count": "740 / 791",
+    "url": "https://cses.fi/problemset/task/2129"
+  },
+  {
+    "category": "Advanced Techniques",
+    "id": "2130",
+    "name": "Distinct Routes II",
+    "solved_count": "499 / 579",
+    "url": "https://cses.fi/problemset/task/2130"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3220",
+    "name": "Sliding Window Sum",
+    "solved_count": "1724 / 1826",
+    "url": "https://cses.fi/problemset/task/3220"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3221",
+    "name": "Sliding Window Minimum",
+    "solved_count": "1361 / 1560",
+    "url": "https://cses.fi/problemset/task/3221"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3426",
+    "name": "Sliding Window Xor",
+    "solved_count": "1381 / 1395",
+    "url": "https://cses.fi/problemset/task/3426"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3405",
+    "name": "Sliding Window Or",
+    "solved_count": "597 / 1064",
+    "url": "https://cses.fi/problemset/task/3405"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3222",
+    "name": "Sliding Window Distinct Values",
+    "solved_count": "1119 / 1132",
+    "url": "https://cses.fi/problemset/task/3222"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3224",
+    "name": "Sliding Window Mode",
+    "solved_count": "828 / 865",
+    "url": "https://cses.fi/problemset/task/3224"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3219",
+    "name": "Sliding Window Mex",
+    "solved_count": "758 / 795",
+    "url": "https://cses.fi/problemset/task/3219"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "1076",
+    "name": "Sliding Window Median",
+    "solved_count": "12546 / 14360",
+    "url": "https://cses.fi/problemset/task/1076"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "1077",
+    "name": "Sliding Window Cost",
+    "solved_count": "8375 / 9674",
+    "url": "https://cses.fi/problemset/task/1077"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3223",
+    "name": "Sliding Window Inversions",
+    "solved_count": "465 / 494",
+    "url": "https://cses.fi/problemset/task/3223"
+  },
+  {
+    "category": "Sliding Window Problems",
+    "id": "3227",
+    "name": "Sliding Window Advertisement",
+    "solved_count": "79 / 138",
+    "url": "https://cses.fi/problemset/task/3227"
+  },
+  {
+    "category": "Interactive Problems",
+    "id": "3112",
+    "name": "Hidden Integer",
+    "solved_count": "873 / 899",
+    "url": "https://cses.fi/problemset/task/3112"
+  },
+  {
+    "category": "Interactive Problems",
+    "id": "3139",
+    "name": "Hidden Permutation",
+    "solved_count": "414 / 502",
+    "url": "https://cses.fi/problemset/task/3139"
+  },
+  {
+    "category": "Interactive Problems",
+    "id": "3305",
+    "name": "K-th Highest Score",
+    "solved_count": "157 / 195",
+    "url": "https://cses.fi/problemset/task/3305"
+  },
+  {
+    "category": "Interactive Problems",
+    "id": "3228",
+    "name": "Permuted Binary Strings",
+    "solved_count": "233 / 242",
+    "url": "https://cses.fi/problemset/task/3228"
+  },
+  {
+    "category": "Interactive Problems",
+    "id": "3273",
+    "name": "Colored Chairs",
+    "solved_count": "200 / 210",
+    "url": "https://cses.fi/problemset/task/3273"
+  },
+  {
+    "category": "Interactive Problems",
+    "id": "3140",
+    "name": "Inversion Sorting",
+    "solved_count": "118 / 125",
+    "url": "https://cses.fi/problemset/task/3140"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "1146",
+    "name": "Counting Bits",
+    "solved_count": "3658 / 4666",
+    "url": "https://cses.fi/problemset/task/1146"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "1655",
+    "name": "Maximum Xor Subarray",
+    "solved_count": "2270 / 2519",
+    "url": "https://cses.fi/problemset/task/1655"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3191",
+    "name": "Maximum Xor Subset",
+    "solved_count": "328 / 358",
+    "url": "https://cses.fi/problemset/task/3191"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3211",
+    "name": "Number of Subset Xors",
+    "solved_count": "303 / 310",
+    "url": "https://cses.fi/problemset/task/3211"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3192",
+    "name": "K Subset Xors",
+    "solved_count": "155 / 181",
+    "url": "https://cses.fi/problemset/task/3192"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3233",
+    "name": "All Subarray Xors",
+    "solved_count": "123 / 170",
+    "url": "https://cses.fi/problemset/task/3233"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "2419",
+    "name": "Xor Pyramid Peak",
+    "solved_count": "1603 / 1984",
+    "url": "https://cses.fi/problemset/task/2419"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3194",
+    "name": "Xor Pyramid Diagonal",
+    "solved_count": "130 / 151",
+    "url": "https://cses.fi/problemset/task/3194"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3195",
+    "name": "Xor Pyramid Row",
+    "solved_count": "106 / 122",
+    "url": "https://cses.fi/problemset/task/3195"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "1654",
+    "name": "SOS Bit Problem",
+    "solved_count": "1639 / 1756",
+    "url": "https://cses.fi/problemset/task/1654"
+  },
+  {
+    "category": "Bitwise Operations",
+    "id": "3141",
+    "name": "And Subset Count",
+    "solved_count": "155 / 159",
+    "url": "https://cses.fi/problemset/task/3141"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "2214",
+    "name": "Inverse Inversions",
+    "solved_count": "1114 / 1179",
+    "url": "https://cses.fi/problemset/task/2214"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "2215",
+    "name": "Monotone Subsequences",
+    "solved_count": "690 / 802",
+    "url": "https://cses.fi/problemset/task/2215"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "3422",
+    "name": "Third Permutation",
+    "solved_count": "162 / 192",
+    "url": "https://cses.fi/problemset/task/3422"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "3423",
+    "name": "Permutation Prime Sums",
+    "solved_count": "167 / 178",
+    "url": "https://cses.fi/problemset/task/3423"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "1697",
+    "name": "Chess Tournament",
+    "solved_count": "1002 / 1160",
+    "url": "https://cses.fi/problemset/task/1697"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "3424",
+    "name": "Distinct Sums Grid",
+    "solved_count": "48 / 79",
+    "url": "https://cses.fi/problemset/task/3424"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "2423",
+    "name": "Filling Trominos",
+    "solved_count": "206 / 352",
+    "url": "https://cses.fi/problemset/task/2423"
+  },
+  {
+    "category": "Construction Problems",
+    "id": "2418",
+    "name": "Grid Path Construction",
+    "solved_count": "102 / 396",
+    "url": "https://cses.fi/problemset/task/2418"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3303",
+    "name": "Nearest Shops",
+    "solved_count": "281 / 368",
+    "url": "https://cses.fi/problemset/task/3303"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1134",
+    "name": "Prüfer Code",
+    "solved_count": "1301 / 1415",
+    "url": "https://cses.fi/problemset/task/1134"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1702",
+    "name": "Tree Traversals",
+    "solved_count": "1005 / 1117",
+    "url": "https://cses.fi/problemset/task/1702"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1757",
+    "name": "Course Schedule II",
+    "solved_count": "1556 / 2233",
+    "url": "https://cses.fi/problemset/task/1757"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1756",
+    "name": "Acyclic Graph Edges",
+    "solved_count": "1929 / 2049",
+    "url": "https://cses.fi/problemset/task/1756"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "2177",
+    "name": "Strongly Connected Edges",
+    "solved_count": "1314 / 1463",
+    "url": "https://cses.fi/problemset/task/2177"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "2179",
+    "name": "Even Outdegree Edges",
+    "solved_count": "1163 / 1368",
+    "url": "https://cses.fi/problemset/task/2179"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1707",
+    "name": "Graph Girth",
+    "solved_count": "2889 / 3325",
+    "url": "https://cses.fi/problemset/task/1707"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3357",
+    "name": "Fixed Length Walk Queries",
+    "solved_count": "163 / 175",
+    "url": "https://cses.fi/problemset/task/3357"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3111",
+    "name": "Transfer Speeds Sum",
+    "solved_count": "171 / 177",
+    "url": "https://cses.fi/problemset/task/3111"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3407",
+    "name": "MST Edge Check",
+    "solved_count": "217 / 233",
+    "url": "https://cses.fi/problemset/task/3407"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3408",
+    "name": "MST Edge Set Check",
+    "solved_count": "95 / 105",
+    "url": "https://cses.fi/problemset/task/3408"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3409",
+    "name": "MST Edge Cost",
+    "solved_count": "158 / 167",
+    "url": "https://cses.fi/problemset/task/3409"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1677",
+    "name": "Network Breakdown",
+    "solved_count": "848 / 900",
+    "url": "https://cses.fi/problemset/task/1677"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3114",
+    "name": "Tree Coin Collecting I",
+    "solved_count": "129 / 141",
+    "url": "https://cses.fi/problemset/task/3114"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3149",
+    "name": "Tree Coin Collecting II",
+    "solved_count": "74 / 83",
+    "url": "https://cses.fi/problemset/task/3149"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1700",
+    "name": "Tree Isomorphism I",
+    "solved_count": "983 / 1130",
+    "url": "https://cses.fi/problemset/task/1700"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1701",
+    "name": "Tree Isomorphism II",
+    "solved_count": "777 / 895",
+    "url": "https://cses.fi/problemset/task/1701"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1699",
+    "name": "Flight Route Requests",
+    "solved_count": "411 / 498",
+    "url": "https://cses.fi/problemset/task/1699"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1703",
+    "name": "Critical Cities",
+    "solved_count": "359 / 545",
+    "url": "https://cses.fi/problemset/task/1703"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1203",
+    "name": "Visiting Cities",
+    "solved_count": "595 / 784",
+    "url": "https://cses.fi/problemset/task/1203"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3308",
+    "name": "Graph Coloring",
+    "solved_count": "90 / 107",
+    "url": "https://cses.fi/problemset/task/3308"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3158",
+    "name": "Bus Companies",
+    "solved_count": "107 / 110",
+    "url": "https://cses.fi/problemset/task/3158"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "3358",
+    "name": "Split into Two Paths",
+    "solved_count": "43 / 72",
+    "url": "https://cses.fi/problemset/task/3358"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1704",
+    "name": "Network Renovation",
+    "solved_count": "838 / 1111",
+    "url": "https://cses.fi/problemset/task/1704"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1705",
+    "name": "Forbidden Cities",
+    "solved_count": "699 / 921",
+    "url": "https://cses.fi/problemset/task/1705"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1752",
+    "name": "Creating Offices",
+    "solved_count": "366 / 475",
+    "url": "https://cses.fi/problemset/task/1752"
+  },
+  {
+    "category": "Advanced Graph Problems",
+    "id": "1685",
+    "name": "New Flight Routes",
+    "solved_count": "269 / 716",
+    "url": "https://cses.fi/problemset/task/1685"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3413",
+    "name": "Filled Subgrid Count I",
+    "solved_count": "205 / 233",
+    "url": "https://cses.fi/problemset/task/3413"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3414",
+    "name": "Filled Subgrid Count II",
+    "solved_count": "98 / 122",
+    "url": "https://cses.fi/problemset/task/3414"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3415",
+    "name": "All Letter Subgrid Count I",
+    "solved_count": "56 / 90",
+    "url": "https://cses.fi/problemset/task/3415"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3416",
+    "name": "All Letter Subgrid Count II",
+    "solved_count": "51 / 58",
+    "url": "https://cses.fi/problemset/task/3416"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3417",
+    "name": "Border Subgrid Count I",
+    "solved_count": "37 / 74",
+    "url": "https://cses.fi/problemset/task/3417"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3418",
+    "name": "Border Subgrid Count II",
+    "solved_count": "46 / 54",
+    "url": "https://cses.fi/problemset/task/3418"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3400",
+    "name": "Raab Game II",
+    "solved_count": "43 / 51",
+    "url": "https://cses.fi/problemset/task/3400"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "1080",
+    "name": "Empty String",
+    "solved_count": "1386 / 1689",
+    "url": "https://cses.fi/problemset/task/1080"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "2229",
+    "name": "Permutation Inversions",
+    "solved_count": "888 / 976",
+    "url": "https://cses.fi/problemset/task/2229"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "2176",
+    "name": "Counting Bishops",
+    "solved_count": "323 / 364",
+    "url": "https://cses.fi/problemset/task/2176"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "2228",
+    "name": "Counting Sequences",
+    "solved_count": "552 / 596",
+    "url": "https://cses.fi/problemset/task/2228"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "1078",
+    "name": "Grid Paths II",
+    "solved_count": "657 / 821",
+    "url": "https://cses.fi/problemset/task/1078"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "1075",
+    "name": "Counting Permutations",
+    "solved_count": "770 / 877",
+    "url": "https://cses.fi/problemset/task/1075"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "2429",
+    "name": "Grid Completion",
+    "solved_count": "185 / 238",
+    "url": "https://cses.fi/problemset/task/2429"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "2421",
+    "name": "Counting Reorders",
+    "solved_count": "190 / 284",
+    "url": "https://cses.fi/problemset/task/2421"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3232",
+    "name": "Tournament Graph Distribution",
+    "solved_count": "42 / 45",
+    "url": "https://cses.fi/problemset/task/3232"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "3157",
+    "name": "Collecting Numbers Distribution",
+    "solved_count": "44 / 45",
+    "url": "https://cses.fi/problemset/task/3157"
+  },
+  {
+    "category": "Counting Problems",
+    "id": "2415",
+    "name": "Functional Graph Distribution",
+    "solved_count": "204 / 256",
+    "url": "https://cses.fi/problemset/task/2415"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1087",
+    "name": "Shortest Subsequence",
+    "solved_count": "2702 / 3596",
+    "url": "https://cses.fi/problemset/task/1087"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3150",
+    "name": "Distinct Values Sum",
+    "solved_count": "238 / 248",
+    "url": "https://cses.fi/problemset/task/3150"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3190",
+    "name": "Distinct Values Splits",
+    "solved_count": "176 / 184",
+    "url": "https://cses.fi/problemset/task/3190"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1670",
+    "name": "Swap Game",
+    "solved_count": "1820 / 2315",
+    "url": "https://cses.fi/problemset/task/1670"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3175",
+    "name": "Beautiful Permutation II",
+    "solved_count": "102 / 140",
+    "url": "https://cses.fi/problemset/task/3175"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "2422",
+    "name": "Multiplication Table",
+    "solved_count": "5642 / 6318",
+    "url": "https://cses.fi/problemset/task/2422"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3151",
+    "name": "Bubble Sort Rounds I",
+    "solved_count": "125 / 139",
+    "url": "https://cses.fi/problemset/task/3151"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3152",
+    "name": "Bubble Sort Rounds II",
+    "solved_count": "59 / 66",
+    "url": "https://cses.fi/problemset/task/3152"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3306",
+    "name": "Nearest Campsites I",
+    "solved_count": "57 / 67",
+    "url": "https://cses.fi/problemset/task/3306"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3307",
+    "name": "Nearest Campsites II",
+    "solved_count": "55 / 63",
+    "url": "https://cses.fi/problemset/task/3307"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1142",
+    "name": "Advertisement",
+    "solved_count": "3794 / 4023",
+    "url": "https://cses.fi/problemset/task/1142"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "2186",
+    "name": "Special Substrings",
+    "solved_count": "867 / 951",
+    "url": "https://cses.fi/problemset/task/2186"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3169",
+    "name": "Counting LCM Arrays",
+    "solved_count": "100 / 110",
+    "url": "https://cses.fi/problemset/task/3169"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3193",
+    "name": "Square Subsets",
+    "solved_count": "93 / 104",
+    "url": "https://cses.fi/problemset/task/3193"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3294",
+    "name": "Subarray Sum Constraints",
+    "solved_count": "65 / 72",
+    "url": "https://cses.fi/problemset/task/3294"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3213",
+    "name": "Water Containers Moves",
+    "solved_count": "61 / 63",
+    "url": "https://cses.fi/problemset/task/3213"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3214",
+    "name": "Water Containers Queries",
+    "solved_count": "69 / 72",
+    "url": "https://cses.fi/problemset/task/3214"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "2425",
+    "name": "Stack Weights",
+    "solved_count": "512 / 604",
+    "url": "https://cses.fi/problemset/task/2425"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3301",
+    "name": "Maximum Average Subarrays",
+    "solved_count": "53 / 59",
+    "url": "https://cses.fi/problemset/task/3301"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3302",
+    "name": "Subsets with Fixed Average",
+    "solved_count": "74 / 82",
+    "url": "https://cses.fi/problemset/task/3302"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3361",
+    "name": "Two Array Average",
+    "solved_count": "65 / 78",
+    "url": "https://cses.fi/problemset/task/3361"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1747",
+    "name": "Pyramid Array",
+    "solved_count": "632 / 766",
+    "url": "https://cses.fi/problemset/task/1747"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "3404",
+    "name": "Permutation Subsequence",
+    "solved_count": "97 / 98",
+    "url": "https://cses.fi/problemset/task/3404"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1188",
+    "name": "Bit Inversions",
+    "solved_count": "2068 / 2372",
+    "url": "https://cses.fi/problemset/task/1188"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1086",
+    "name": "Writing Numbers",
+    "solved_count": "662 / 718",
+    "url": "https://cses.fi/problemset/task/1086"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "2427",
+    "name": "Letter Pair Move Game",
+    "solved_count": "172 / 249",
+    "url": "https://cses.fi/problemset/task/2427"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1147",
+    "name": "Maximum Building I",
+    "solved_count": "1860 / 1945",
+    "url": "https://cses.fi/problemset/task/1147"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1162",
+    "name": "Sorting Methods",
+    "solved_count": "704 / 754",
+    "url": "https://cses.fi/problemset/task/1162"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "1191",
+    "name": "Cyclic Array",
+    "solved_count": "1012 / 1155",
+    "url": "https://cses.fi/problemset/task/1191"
+  },
+  {
+    "category": "Additional Problems I",
+    "id": "2414",
+    "name": "List of Sums",
+    "solved_count": "407 / 538",
+    "url": "https://cses.fi/problemset/task/2414"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3215",
+    "name": "Bouncing Ball Steps",
+    "solved_count": "88 / 94",
+    "url": "https://cses.fi/problemset/task/3215"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3216",
+    "name": "Bouncing Ball Cycle",
+    "solved_count": "36 / 51",
+    "url": "https://cses.fi/problemset/task/3216"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3218",
+    "name": "Knight Moves Queries",
+    "solved_count": "62 / 73",
+    "url": "https://cses.fi/problemset/task/3218"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3108",
+    "name": "K Subset Sums I",
+    "solved_count": "72 / 98",
+    "url": "https://cses.fi/problemset/task/3108"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3109",
+    "name": "K Subset Sums II",
+    "solved_count": "43 / 51",
+    "url": "https://cses.fi/problemset/task/3109"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2132",
+    "name": "Increasing Array II",
+    "solved_count": "711 / 821",
+    "url": "https://cses.fi/problemset/task/2132"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1189",
+    "name": "Food Division",
+    "solved_count": "472 / 560",
+    "url": "https://cses.fi/problemset/task/1189"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1698",
+    "name": "Swap Round Sorting",
+    "solved_count": "376 / 464",
+    "url": "https://cses.fi/problemset/task/1698"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2430",
+    "name": "Binary Subsequences",
+    "solved_count": "249 / 374",
+    "url": "https://cses.fi/problemset/task/2430"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1706",
+    "name": "School Excursion",
+    "solved_count": "1202 / 1281",
+    "url": "https://cses.fi/problemset/task/1706"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1709",
+    "name": "Coin Grid",
+    "solved_count": "729 / 866",
+    "url": "https://cses.fi/problemset/task/1709"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3312",
+    "name": "Grid Coloring II",
+    "solved_count": "66 / 81",
+    "url": "https://cses.fi/problemset/task/3312"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2426",
+    "name": "Programmers and Artists",
+    "solved_count": "458 / 598",
+    "url": "https://cses.fi/problemset/task/2426"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2174",
+    "name": "Removing Digits II",
+    "solved_count": "184 / 420",
+    "url": "https://cses.fi/problemset/task/2174"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2180",
+    "name": "Coin Arrangement",
+    "solved_count": "281 / 384",
+    "url": "https://cses.fi/problemset/task/2180"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3159",
+    "name": "Replace with Difference",
+    "solved_count": "49 / 62",
+    "url": "https://cses.fi/problemset/task/3159"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2432",
+    "name": "Grid Puzzle I",
+    "solved_count": "454 / 500",
+    "url": "https://cses.fi/problemset/task/2432"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2131",
+    "name": "Grid Puzzle II",
+    "solved_count": "395 / 437",
+    "url": "https://cses.fi/problemset/task/2131"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2115",
+    "name": "Bit Substrings",
+    "solved_count": "323 / 398",
+    "url": "https://cses.fi/problemset/task/2115"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2075",
+    "name": "Reversal Sorting",
+    "solved_count": "308 / 378",
+    "url": "https://cses.fi/problemset/task/2075"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1159",
+    "name": "Book Shop II",
+    "solved_count": "995 / 1155",
+    "url": "https://cses.fi/problemset/task/1159"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3161",
+    "name": "GCD Subsets",
+    "solved_count": "180 / 187",
+    "url": "https://cses.fi/problemset/task/3161"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3402",
+    "name": "Minimum Cost Pairs",
+    "solved_count": "42 / 58",
+    "url": "https://cses.fi/problemset/task/3402"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3425",
+    "name": "Same Sum Subsets",
+    "solved_count": "52 / 82",
+    "url": "https://cses.fi/problemset/task/3425"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1157",
+    "name": "Mex Grid Queries",
+    "solved_count": "750 / 887",
+    "url": "https://cses.fi/problemset/task/1157"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1148",
+    "name": "Maximum Building II",
+    "solved_count": "380 / 472",
+    "url": "https://cses.fi/problemset/task/1148"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1161",
+    "name": "Stick Divisions",
+    "solved_count": "3412 / 4019",
+    "url": "https://cses.fi/problemset/task/1161"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "3401",
+    "name": "Stick Difference",
+    "solved_count": "16 / 82",
+    "url": "https://cses.fi/problemset/task/3401"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "1665",
+    "name": "Coding Company",
+    "solved_count": "1273 / 1682",
+    "url": "https://cses.fi/problemset/task/1665"
+  },
+  {
+    "category": "Additional Problems II",
+    "id": "2402",
+    "name": "Two Stacks Sorting",
+    "solved_count": "145 / 452",
+    "url": "https://cses.fi/problemset/task/2402"
+  }
+]

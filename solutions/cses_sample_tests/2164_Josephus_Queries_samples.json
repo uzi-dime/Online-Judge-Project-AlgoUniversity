@@ -1,0 +1,12 @@
+{
+  "problem_id": "2164",
+  "problem_name": "Josephus Queries",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "4\n7 1\n7 3\n2 2\n1337 1313",
+      "output": "2\n6\n1\n1107"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:25:47.179103"
+}

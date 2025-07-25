@@ -1,0 +1,12 @@
+{
+  "problem_id": "2190",
+  "problem_name": "Line Segment Intersection",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "5\n1 1 5 3 1 2 4 3\n1 1 5 3 1 1 4 3\n1 1 5 3 2 3 4 1\n1 1 5 3 2 4 4 1\n1 1 5 3 3 2 7 4",
+      "output": "NO\nYES\nYES\nYES\nYES"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:28:06.031604"
+}

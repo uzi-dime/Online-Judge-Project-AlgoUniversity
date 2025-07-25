@@ -1,0 +1,12 @@
+{
+  "problem_id": "1666",
+  "problem_name": "Building Roads",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "4 2\n1 2\n3 4",
+      "output": "1\n2 3"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:27:05.174551"
+}

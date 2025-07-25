@@ -1,0 +1,16 @@
+{
+  "problem_id": "1070",
+  "problem_name": "Permutations",
+  "sample_count": 2,
+  "test_cases": [
+    {
+      "input": "5",
+      "output": "4 2 5 3 1"
+    },
+    {
+      "input": "3",
+      "output": "NO SOLUTION"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:34:41.316952"
+}

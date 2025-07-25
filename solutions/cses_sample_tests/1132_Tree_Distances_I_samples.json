@@ -1,0 +1,12 @@
+{
+  "problem_id": "1132",
+  "problem_name": "Tree Distances I",
+  "sample_count": 1,
+  "test_cases": [
+    {
+      "input": "5\n1 2\n1 3\n3 4\n3 5",
+      "output": "2 3 2 3 3"
+    }
+  ],
+  "scraped_at": "2025-07-22T20:32:39.279108"
+}
