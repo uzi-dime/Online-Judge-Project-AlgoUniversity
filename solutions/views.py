@@ -4,11 +4,62 @@ from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator
 from django.db.models import Q
 import json
-
+import os
+import re
+from django.conf import settings
 from .models import Solution, TestResult
 from problems.models import Problem, TestCase
 from users.auth import jwt_required
 from .tasks import evaluate_solution  # We'll create this later for async evaluation
+from django.contrib.admin.views.decorators import staff_member_required
+from django.views.decorators.http import require_http_methods
+
+
+@csrf_exempt
+@jwt_required
+@require_http_methods(['POST'])
+def populate_testcases_all(request):
+    """
+    Populate test cases for all problems in the cses/tests folder.
+    Only accessible by staff users.
+    """
+    try:
+          # Debug log
+        if request.user.is_staff:
+            print('Populating test cases for all problems...')
+        else:
+            return JsonResponse({'error': 'Permission denied'}, status=403)
+        problems = Problem.objects.all()
+        created_testcases = []
+        for problem in problems:
+            pattern = re.compile(rf"^{problem.id}_\w+\.json$")
+            for filename in os.listdir(os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests')):
+                # print(filename)
+                if pattern.match(filename):
+                    filepath = os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests', filename)
+                    # print(filepath)
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        print(data)
+                        for tc in data['tests']:
+                            testcase = TestCase.objects.create(
+                                problem=problem,
+                                input_data=tc['input'],
+                                output_data=tc['output'],
+                                is_sample=tc.get('is_sample', False),
+                                # points=tc.get('points', 10)
+                            )
+                            created_testcases.append({
+                                'id': testcase.id,
+                                'is_sample': testcase.is_sample,
+                                # 'points': testcase.points
+                            })
+        return JsonResponse({
+            'message': f'Successfully created {len(created_testcases)} test cases',
+            'testcases': created_testcases
+        })
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
 @csrf_exempt
 @jwt_required
@@ -177,3 +228,27 @@ def solution_detail(request, solution_id):
         return JsonResponse({'message': 'Solution deleted successfully'})
     
     return HttpResponseNotAllowed(['GET', 'PUT', 'DELETE'])
+
+
+@csrf_exempt
+@jwt_required
+def testcase_list(request, problem_id):
+    """
+    List all test cases for a given problem
+    """
+    if request.method != 'GET':
+        return HttpResponseNotAllowed(['GET'])
+        
+    test_cases = TestCase.objects.filter(problem_id=problem_id)
+    
+    return JsonResponse({
+        'test_cases': [{
+            'id': t.id,
+            'problem': {
+                'id': t.problem.id,
+                'title': t.problem.title
+            },
+            'input_data': t.input_data,
+            'output_data': t.output_data
+        } for t in test_cases]
+    })

@@ -2,12 +2,13 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 import json
-
+import os
+import re
 from .service import CompilerService
 from problems.models import Problem, TestCase
 from solutions.models import Solution, TestResult
 from users.auth import jwt_required
-
+from django.conf import settings
 compiler_service = CompilerService()
 
 @csrf_exempt
@@ -29,14 +30,22 @@ def compile_and_run(request, problem_id):
 
         # Get the problem and its test cases
         problem = get_object_or_404(Problem, pk=problem_id)
-        test_cases = [
-            {'input': tc.input_data, 'output': tc.output_data}
-            for tc in problem.test_cases.filter(is_sample=True)
-        ]
-
+        # Get test cases from file
+        test_cases = []
+        pattern = re.compile(rf"^{problem_id}_\w+_gemini_tests\.json$")
+        for filename in os.listdir(os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests')):
+            # print(filename)
+            if pattern.match(filename):
+                filepath = os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests', filename)
+                # print(filepath)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    test_cases = data['tests']
+                break
+        # print(test_cases)  # Debug log
         # Run the code against test cases
         results = compiler_service.run_tests(source_code, language, test_cases)
-
+        print(f"Results: {results}")  # Debug log
         # Create or update solution record
         solution = Solution.objects.create(
             problem=problem,

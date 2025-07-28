@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+CSRF_exempt_views = ['admin']
+    
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -38,8 +41,36 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # For development; restrict in production
-CORS_ALLOWED_ORIGINS = ["http://localhost:8000", "http://127.0.0.1:8000"]  #
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = True  # For development only
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 ROOT_URLCONF = 'online_judge.urls'
 
@@ -81,39 +112,64 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend' / 'static',
+]
+
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = True  # Only in development
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "http://localhost:5173",  # If using Vite
+    "http://127.0.0.1:5173",
+]
+
+# Security settings
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # /home/flash/projects/online-judge/online_judge/settings.py
 # ... (other settings)
 
-GEMINI_API_KEY = "AIzaSyAVX6va96s6iwvjBtivSR1aUB0tFbsw95k"  # Replace with your actual key
-CSES_SCRAPE_DELAY = 1.0
+GEMINI_API_KEY = "AIzaSyAy7NHROyMu3rmQs7SPOwfym4DpyQ2q7bw"  # Replace with your actual key
+CSES_SCRAPE_DELAY = 5.0
 GEMINI_MODEL = "gemini-1.5-flash"
 
-# settings.py (relevant section)
-import os
-from pathlib import Path
+# Static files configuration
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'online-judge-frontend' / 'static',
+]
 
-# BASE_DIR is the Django project root (e.g., /path/to/online-judge)
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Serve static files in development
+if DEBUG:
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
 # Static files configuration
 STATIC_URL = '/static/'  # URL prefix for serving static files (e.g., /static/assets/js/api.js)
 
-# Directories where Django looks for static files
+# Static files configuration
 STATICFILES_DIRS = [
-    # Points to sibling directory: e.g., /path/to/online-judge-frontend/static
-    BASE_DIR.parent / 'online-judge-frontend' / 'static',
-    # Add more if needed, e.g., BASE_DIR / 'additional_static_folder'
+    BASE_DIR / 'online-judge-frontend' / 'static',
 ]
-
-print(f"Static files will be served from: {STATICFILES_DIRS}")
-
-# For production: Where collectstatic copies files to
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/static/'
 
-# Ensure DEBUG is True for development (allows runserver to serve static files)
-DEBUG = True
+# Ensure static files are served in development
+if DEBUG:
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+# Ensure DEBUG is True for development (allows runserver to
+

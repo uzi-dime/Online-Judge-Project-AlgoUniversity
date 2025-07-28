@@ -28,7 +28,7 @@ def evaluate_solution(solution_id):
         max_execution_time = 0
         max_memory_used = 0
         all_passed = True
-
+        print(test_cases)  # Debug log
         # Run against each test case
         for test_case in test_cases:
             # Prepare test input

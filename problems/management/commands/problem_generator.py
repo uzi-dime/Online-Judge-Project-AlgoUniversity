@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 import google.generativeai as genai
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from django.db import IntegrityError
+from django.db import IntegrityError, transaction
 from django.contrib.auth import get_user_model
 from problems.models import Problem
 
@@ -163,51 +163,52 @@ HTML STATEMENT:
 
         self.stdout.write(f"Loaded {len(problems)} problems")
 
-        for item in tqdm(problems, desc="Processing", unit="prob"):
-            pid = item.get("id")
-            url = item.get("url")
-            if not pid or not url:
-                self.stdout.write(self.style.WARNING(f"Skipping invalid entry: {item}"))
-                continue
-            if Problem.objects.filter(id=pid).exists():
-                self.stdout.write(f"Problem {pid} already exists, skipping...")
-                continue
+        with transaction.atomic():
+            Problem.objects.all().delete()  # Flush existing problems
 
-            try:
-                html = self.scrape_problem_html(url)
+            for item in tqdm(problems, desc="Processing", unit="prob"):
+                pid = item.get("id")
+                url = item.get("url")
+                if not pid or not url:
+                    self.stdout.write(self.style.WARNING(f"Skipping invalid entry: {item}"))
+                    continue
+
                 try:
-                    data = self.gemini_extract(llm, url, html)
-                except Exception:
-                    # Fallback to paid model if free-tier fails
-                    if model.endswith("-free"):
-                        llm = genai.GenerativeModel("gemini-1.5-flash")
+                    html = self.scrape_problem_html(url)
+                    try:
                         data = self.gemini_extract(llm, url, html)
-                    else:
-                        raise
+                    except Exception:
+                        # Fallback to paid model if free-tier fails
+                        if model.endswith("-free"):
+                            llm = genai.GenerativeModel("gemini-1.5-flash")
+                            data = self.gemini_extract(llm, url, html)
+                        else:
+                            raise
 
-                Problem.objects.create(
-                    id=pid,
-                    title=data["title"],
-                    description=data["description"],
-                    input_format=data["input_format"],
-                    output_format=data["output_format"],
-                    constraints=data["constraints"],
-                    difficulty=data["difficulty"],
-                    time_limit=data["time_limit"],
-                    memory_limit=data["memory_limit"],
-                    author=default_author
-                )
-                self.stdout.write(self.style.SUCCESS(f"Added problem {pid}"))
+                    Problem.objects.create(
+                        id=pid,
+                        url=url,
+                        title=data["title"],
+                        description=data["description"],
+                        input_format=data["input_format"],
+                        output_format=data["output_format"],
+                        constraints=data["constraints"],
+                        difficulty=data["difficulty"],
+                        time_limit=data["time_limit"],
+                        memory_limit=data["memory_limit"],
+                        author=default_author
+                    )
+                    self.stdout.write(self.style.SUCCESS(f"Added problem {pid}"))
 
-            except IntegrityError as e:
-                self.stdout.write(self.style.ERROR(f"DB error for {pid}: {e}"))
-                continue
-            except Exception as e:
-                self.stdout.write(self.style.ERROR(f"Failed {pid}: {e}"))
-                continue
+                except IntegrityError as e:
+                    self.stdout.write(self.style.ERROR(f"DB error for {pid}: {e}"))
+                    continue
+                except Exception as e:
+                    self.stdout.write(self.style.ERROR(f"Failed {pid}: {e}"))
+                    continue
 
-            # Delay to respect rate limits
-            delay = getattr(settings, "CSES_SCRAPE_DELAY", 1.0)
-            time.sleep(delay)
+                # Delay to respect rate limits
+                delay = getattr(settings, "CSES_SCRAPE_DELAY", 1.0)
+                time.sleep(delay)
 
         self.stdout.write(self.style.SUCCESS("All problems ingested successfully"))

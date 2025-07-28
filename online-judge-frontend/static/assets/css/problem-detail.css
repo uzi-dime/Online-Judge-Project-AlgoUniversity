@@ -1,0 +1,146 @@
+/* Problem detail styles */
+.problem-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.problem-header {
+    margin-bottom: 30px;
+}
+
+.problem-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.badge-success { background-color: #28a745; color: white; }
+.badge-warning { background-color: #ffc107; color: black; }
+.badge-danger { background-color: #dc3545; color: white; }
+.badge-dark { background-color: #343a40; color: white; }
+
+.format-section, .constraints-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.format-section h3, .constraints-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.format-content {
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-wrap;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+#sampleTests {
+    margin-top: 30px;
+}
+
+.sample-test-case {
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.test-header {
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: bold;
+    color: #495057;
+}
+
+.test-content {
+    padding: 15px;
+}
+
+.input-section, .output-section, .explanation-section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.sample-content {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.explanation-content {
+    padding: 10px;
+    background-color: #fff3cd;
+    border-radius: 4px;
+    color: #856404;
+}
+
+.error-message {
+    color: #dc3545;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Code editor section */
+.editor-section {
+    margin-top: 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.editor-header {
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#editor {
+    height: 400px;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .problem-container {
+        padding: 10px;
+    }
+    
+    .sample-test-case {
+        margin-bottom: 15px;
+    }
+    
+    .format-section, .constraints-section {
+        padding: 10px;
+    }
+    
+    #editor {
+        height: 300px;
+    }
+}

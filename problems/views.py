@@ -2,8 +2,10 @@ from django.http import JsonResponse, HttpResponseNotAllowed, HttpResponseBadReq
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator
+from django.conf import settings
 import json
-
+import os
+import re
 from .models import Problem, TestCase
 from users.auth import jwt_required
 
@@ -86,10 +88,10 @@ def problem_detail(request, problem_id):
             'output_format': problem.output_format,
             'constraints': problem.constraints,
             'difficulty': problem.difficulty,
-            'author': {
-                'id': problem.author.id,
-                'username': problem.author.username
-            },
+            # 'author': {
+            #     'id': problem.author.id,
+            #     'username': problem.author.username
+            # },
             'created_at': problem.created_at,
             'updated_at': problem.updated_at,
             'time_limit': problem.time_limit,
@@ -148,3 +150,48 @@ def problem_detail(request, problem_id):
         return JsonResponse({'message': 'Problem deleted successfully'})
     
     return HttpResponseNotAllowed(['GET', 'PUT', 'DELETE'])
+
+@csrf_exempt
+@jwt_required
+def sample_test_cases(request, problem_id):
+    if request.method != 'GET':
+        return HttpResponseNotAllowed(['GET'])
+
+    problem_id_str = str(problem_id)
+    match = re.match(r"\d+", problem_id_str)
+    number = match[0] if match else None
+    if number is None:
+        return JsonResponse({'error': f"problem_id '{problem_id}' does not start with digits"}, status=400)
+
+    dir_path = os.path.join(settings.BASE_DIR, 'solutions', 'cses_sample_tests')
+
+    # Find the matching sample test JSON file starting with the problem number
+    filename = next(
+        (
+            os.path.join(dir_path, f)
+            for f in os.listdir(dir_path)
+            if f.startswith(number) and f.endswith('.json')
+        ),
+        None
+    )
+    if filename is None:
+        return JsonResponse({'error': f"No sample test cases file found for problem_id '{problem_id}'"}, status=404)
+
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            sample_cases = json.load(f)
+
+        data = {
+            # 'problem_id': sample_cases.get('problem_id'),
+            # 'problem_name': sample_cases.get('problem_name'),
+            # 'sample_count': sample_cases.get('sample_count'),
+            'input_test_cases': [case.get('input', []) for case in sample_cases.get('test_cases')],
+            'output_test_cases': [case.get('output', []) for case in sample_cases.get('test_cases')],
+            # 'scraped_at': sample_cases.get('scraped_at'),
+        }
+    except FileNotFoundError:
+        return JsonResponse({'error': 'No sample test cases found'}, status=404)
+    except json.JSONDecodeError:
+        return JsonResponse({'error': 'Sample test cases file is corrupted'}, status=500)
+
+    return JsonResponse(data, safe=False)

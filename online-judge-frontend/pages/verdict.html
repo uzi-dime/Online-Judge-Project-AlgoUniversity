@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Verdict - CodeJudge</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../static/assets/css/custom.css" rel="stylesheet">
+    <link href="../static/assets/css/verdict.css" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container verdict-container">
+        <div class="submission-details">
+            <h2>Submission Details</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <span class="label">Problem:</span>
+                                <a id="problemLink" href="#" class="value"></a>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Submitted at:</span>
+                                <span id="submissionTime" class="value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Language:</span>
+                                <span id="language" class="value"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <span class="label">Status:</span>
+                                <span id="verdictStatus" class="badge"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Time:</span>
+                                <span id="executionTime" class="value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Memory:</span>
+                                <span id="memoryUsage" class="value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-cases mt-4">
+            <h3>Test Cases</h3>
+            <div id="testCasesList" class="accordion">
+                <!-- Test cases will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="submission-code mt-4">
+            <h3>Submitted Code</h3>
+            <div class="code-container">
+                <pre><code id="submittedCode" class="language-python"></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <!-- Custom JS -->
+    <script type="module" src="/static/assets/js/services/config.js"></script>
+    <script type="module" src="/static/assets/js/services/api.js"></script>
+    <script type="module" src="/static/assets/js/verdict.js"></script>
+</body>
+</html>

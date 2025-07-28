@@ -1,0 +1,53 @@
+
+{
+
+  "name": "online-judge-frontend",
+
+  "version": "1.0.0",
+
+  "description": "Online Judge Platform Frontend using HTML, CSS, and Bootstrap",
+
+  "main": "index.html",
+
+  "scripts": {
+
+    "start": "python -m http.server 8000",
+
+    "serve": "python3 -m http.server 8000",
+
+    "dev": "live-server --port=8000",
+
+    "build": "echo 'No build process needed for static site'",
+
+    "deploy": "echo 'Add your deployment script here'"
+
+  },
+
+  "keywords": [
+
+    "online-judge",
+
+    "coding-platform",
+
+    "bootstrap",
+
+    "html",
+
+    "css",
+
+    "javascript"
+
+  ],
+
+  "author": "Your Name",
+
+  "license": "MIT",
+
+  "devDependencies": {
+
+    "live-server": "^1.2.2"
+
+  }
+
+}
+
