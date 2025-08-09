@@ -13,7 +13,7 @@
 
     "start": "python -m http.server 8000",
 
-    "serve": "python3 -m http.server 8000",
+    "serve": "python3 server.py",
 
     "dev": "live-server --port=8000",
 

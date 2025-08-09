@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="/static/assets/css/custom.css" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -22,6 +22,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="text-center mb-4">Login</h2>
+                        <div id="loginError" class="alert alert-danger d-none" role="alert">
+                            <!-- Error message will be dynamically inserted here -->
+                        </div>
                         <form id="loginForm">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
@@ -43,11 +46,21 @@
             </div>
         </div>
     </main>
+    <script>
+        fetch('/components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script type="module" src="../assets/js/auth.js"></script>
-    <script src="../assets/js/navigation.js"></script>
+    <script type="module" src="/static/assets/js/config.js"></script> 
+    <script type="module" src="/static/assets/js/services/auth.js"></script>
+    <script type="module" src="/static/assets/js/login.js"></script>
+    <script type="module" src="/static/assets/js/navigation.js"></script>
 </body>
 </html>
+

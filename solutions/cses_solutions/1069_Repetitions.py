@@ -1,21 +1,33 @@
 # CSES Problem: Repetitions
 # Problem ID: 1069
-# Generated on: 2025-07-22 20:34:29
+# Generated on: 2025-07-30 22:00:50
 
-# Read the DNA sequence from standard input
-s = input().strip()
+import sys
 
-# Initialize variables to track the current and maximum repetition lengths
-max_len = 1
-curr_len = 1
+def solve():
+    s = sys.stdin.readline().strip()
+    n = len(s)
 
-# Iterate through the string, comparing each character to the previous one
-for i in range(1, len(s)):
-    if s[i] == s[i - 1]:
-        curr_len += 1
-        if curr_len > max_len:
-            max_len = curr_len
-    else:
-        curr_len = 1
+    if n == 0:
+        print(0)
+        return
 
-print(max_len)
+    max_length = 0
+    current_length = 0
+    current_char = ''
+
+    for char in s:
+        if char == current_char:
+            current_length += 1
+        else:
+            max_length = max(max_length, current_length)
+            current_char = char
+            current_length = 1
+
+    # After the loop, we need to check the last repetition
+    max_length = max(max_length, current_length)
+
+    print(max_length)
+
+if __name__ == "__main__":
+    solve()

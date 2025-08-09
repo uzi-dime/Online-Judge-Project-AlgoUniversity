@@ -1,26 +1,27 @@
 # CSES Problem: Ferris Wheel
 # Problem ID: 1090
-# Generated on: 2025-07-22 20:20:26
+# Generated on: 2025-07-30 22:05:08
 
 import sys
 
-# Read input efficiently
-n, x = map(int, sys.stdin.readline().split())
-p = list(map(int, sys.stdin.readline().split()))
+def solve():
+    n, x = map(int, sys.stdin.readline().split())
+    p = list(map(int, sys.stdin.readline().split()))
+    p.sort()
 
-# Sort children's weights
-p.sort()
+    left = 0
+    right = n - 1
+    gondolas = 0
 
-# Two pointers: i (lightest), j (heaviest)
-i, j = 0, n - 1
-gondolas = 0
+    while left <= right:
+        gondolas += 1
+        if left == right:
+            break
+        if p[left] + p[right] <= x:
+            left += 1
+        right -= 1
 
-while i <= j:
-    # If lightest and heaviest together fit, pair them
-    if p[i] + p[j] <= x:
-        i += 1
-    # Always take the heaviest child
-    j -= 1
-    gondolas += 1
+    print(gondolas)
 
-print(gondolas)
+if __name__ == "__main__":
+    solve()

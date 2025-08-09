@@ -1,33 +1,35 @@
 # CSES Problem: Restaurant Customers
 # Problem ID: 1619
-# Generated on: 2025-07-22 20:20:43
+# Generated on: 2025-07-30 22:05:33
 
 import sys
 
-# Read all input at once for efficiency
-input = sys.stdin.read
-data = input().split()
+def solve():
+    n = int(sys.stdin.readline())
+    events = []
+    for _ in range(n):
+        a, b = map(int, sys.stdin.readline().split())
+        # Arrival event: +1 customer
+        events.append((a, 1))
+        # Leaving event: -1 customer
+        events.append((b, -1))
 
-n = int(data[0])
-events = []
+    # Sort events by time. If times are equal, process arrivals before departures.
+    # This is crucial because if a customer arrives at time t and another leaves at time t,
+    # the arriving customer is considered to be in the restaurant at time t.
+    # The problem statement guarantees distinct arrival and leaving times,
+    # so this tie-breaking rule is not strictly necessary based on the constraints,
+    # but it's a good general practice for this type of problem.
+    events.sort()
 
-# Collect all arrival and leaving events
-for i in range(n):
-    a = int(data[1 + 2 * i])
-    b = int(data[2 + 2 * i])
-    events.append((a, 1))  # arrival: +1 customer
-    events.append((b, -1)) # leaving: -1 customer
+    current_customers = 0
+    max_customers = 0
 
-# Sort events: by time; arrivals (+1) before departures (-1) if same time
-events.sort()
+    for time, type in events:
+        current_customers += type
+        max_customers = max(max_customers, current_customers)
 
-current = 0
-maximum = 0
+    print(max_customers)
 
-# Sweep through events, tracking current number of customers
-for _, change in events:
-    current += change
-    if current > maximum:
-        maximum = current
-
-print(maximum)
+if __name__ == "__main__":
+    solve()

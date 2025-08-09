@@ -109,7 +109,13 @@
             </div>
         </div>
     </main>
-
+    <script>
+        fetch('/components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Monaco Editor -->
@@ -121,7 +127,7 @@
     <link rel="stylesheet" href="/static/assets/css/custom.css">
     <script type="module" src="/static/assets/js/navigation.js"></script>
     <script type="module" src="/static/assets/js/problem-detail.js"></script>
-    <script type="module" src="/static/assets/js/services/config.js"></script>
+    <script type="module" src="/static/assets/js/config.js"></script>
     <script type="module" src="/static/assets/js/services/api.js"></script>
 
     <!-- <script type="module" src="../assets/js/problem-detail.js"></script> -->

@@ -1,8 +1,8 @@
 // register.js
 console.log('Register.js loading...');
 
-import { API_CONFIG, Auth } from './services/config.js';
 import APIService from './services/api.js';
+import { saveSignupToken } from './services/auth.js';
 
 console.log('Imports completed');
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // const response = await APIService.login(username, password);
                 if (response.token) {
-                    Auth.setToken(response.token);
+                    saveSignupToken(response.token, username);
                 } else {
                     console.error('Login failed to provide token');
                 }
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 setTimeout(() => {
                     console.log('Redirecting to problems page...');
-                    window.location.href = '../../../pages/problems.html';
-                }, 2000);
+                    window.location.href = '../../../pages/login.html';
+                }, 2000); // 2 seconds
             } else {
                 console.warn('Registration response indicated failure:', response);
                 errorMsg.textContent = response.message || 'Registration failed. Please try again.';

@@ -1,34 +1,41 @@
 # CSES Problem: Apartments
 # Problem ID: 1084
-# Generated on: 2025-07-22 20:20:18
+# Generated on: 2025-07-30 22:04:58
 
 import sys
 
-# Fast input
-input = sys.stdin.readline
+def solve():
+    n, m, k = map(int, sys.stdin.readline().split())
+    applicants = list(map(int, sys.stdin.readline().split()))
+    apartments = list(map(int, sys.stdin.readline().split()))
 
-# Read n, m, k
-n, m, k = map(int, input().split())
+    applicants.sort()
+    apartments.sort()
 
-# Read desired sizes and apartment sizes
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
+    applicant_idx = 0
+    apartment_idx = 0
+    count = 0
 
-# Sort both lists for two-pointer approach
-a.sort()
-b.sort()
+    while applicant_idx < n and apartment_idx < m:
+        desired_size = applicants[applicant_idx]
+        apartment_size = apartments[apartment_idx]
 
-i = j = res = 0
+        lower_bound = desired_size - k
+        upper_bound = desired_size + k
 
-# Two-pointer matching
-while i < n and j < m:
-    if abs(a[i] - b[j]) <= k:
-        res += 1
-        i += 1
-        j += 1
-    elif b[j] < a[i] - k:
-        j += 1
-    else:
-        i += 1
+        if lower_bound <= apartment_size <= upper_bound:
+            # Applicant gets the apartment
+            count += 1
+            applicant_idx += 1
+            apartment_idx += 1
+        elif apartment_size < lower_bound:
+            # Apartment is too small for the current applicant, try the next apartment
+            apartment_idx += 1
+        else: # apartment_size > upper_bound
+            # Apartment is too large for the current applicant, try the next applicant
+            applicant_idx += 1
 
-print(res)
+    print(count)
+
+if __name__ == "__main__":
+    solve()

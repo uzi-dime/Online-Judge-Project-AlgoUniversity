@@ -1,4 +1,4 @@
-import { Auth } from './config.js';
+import { API_CONFIG, Auth } from "../config.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     // Load navbar component

@@ -13,12 +13,14 @@ JWT_SECRET = getattr(settings, 'SECRET_KEY', 'changeme')
 JWT_ALGORITHM = 'HS256'
 JWT_EXP_DELTA_SECONDS = 3600
 
-def generate_jwt(user):
+def generate_jwt(user,signup=False):
     payload = {
         'user_id': user.id,
         'username': user.username,
         'exp': datetime.utcnow() + timedelta(seconds=JWT_EXP_DELTA_SECONDS)
     }
+    if signup:
+        payload['exp'] = datetime.max
     return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
 @csrf_exempt
@@ -37,12 +39,14 @@ def signup(request):
             email=data.get('email', ''),
             first_name=data.get('first_name', ''),
             last_name=data.get('last_name', ''),
+            # signup_token=token
         )
+        token = generate_jwt(user, True)
         user.institution = data.get('institution', '')
         user.country = data.get('country', '')
         user.skill_level = data.get('skill_level', 'BEGINNER')
+        user.signup_token = token
         user.save()
-        token = generate_jwt(user)
         return JsonResponse({
             'token': token,
             'user': {

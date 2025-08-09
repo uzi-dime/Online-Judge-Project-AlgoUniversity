@@ -1,0 +1,92 @@
+/* Leaderboard page backgrounds */
+body {
+    background-color: #121223;
+    color: #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+}
+
+/* Table styles */
+.table.leaderboard, table.leaderboard {
+    background-color: #171735;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px rgba(20,40,70,0.33);
+    overflow: hidden;
+}
+
+/* Header with gradient for fame look */
+thead.thead-dark,
+.table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+/* Table rows: subtle highlight */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #1a1a33;
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #171735;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #28306c;
+    transition: background 0.2s;
+}
+
+/* Rank cell bold */
+.table td:first-child {
+    font-weight: 700;
+    color: #b8b8ff;
+}
+
+/* Username subtle accent */
+.table td:nth-child(2) {
+    color: #f7e6ff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Problems solved count */
+.table td:nth-child(3) {
+    color: #86dc3d;
+    font-family: 'Segoe UI', monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Hall of Fame table responsiveness */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+        border-radius: 4px;
+        background: #171735;
+    }
+    tbody td {
+        padding: 0.7rem 1rem;
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+
+/* Loader and error message styling */
+#loadingMessage {
+    padding: 2rem 0;
+    color: #aaa;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+#errorMessage {
+    color: #dc3545;
+    font-size: 1.1rem;
+    padding: 1.5rem 0;
+}

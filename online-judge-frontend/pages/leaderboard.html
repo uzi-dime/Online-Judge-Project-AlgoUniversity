@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hall of Fame - Leadership Board</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/assets/css/custom.css" />
+  <link rel="stylesheet" href="/static/assets/css/leaderboard.css" />
+  <style>
+    body {
+      background-color: #121223;
+      color: #ddd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+    table {
+      background-color: #171735;
+      color: #fff;
+    }
+    thead {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+  </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+  <div class="container">
+    <h2>Hall of Fame</h2>
+    <p>Ranking of users by number of solved problems</p>
+    <table class="table table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Solved Problems</th>
+        </tr>
+      </thead>
+      <tbody id="hallOfFameBody">
+        
+
+      </tbody>
+    </table>
+  </div>
+  <script>
+        fetch('/components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+   </script>
+
+  <script type="module" src="/static/assets/js/leaderboard.js"></script>
+  <script type="module" src="/static/assets/js/services/api.js"></script>
+  <script type="module" src="/static/assets/js/config.js"></script>      
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

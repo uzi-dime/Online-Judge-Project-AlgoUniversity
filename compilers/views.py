@@ -15,48 +15,78 @@ compiler_service = CompilerService()
 @jwt_required
 def compile_and_run(request, problem_id):
     """
-    Endpoint to compile and run code against a problem's test cases
+    API endpoint to compile and run user-submitted code for a given problem.
+    
+    Method: POST
+    Payload: JSON with keys:
+        - 'code': source code (string)
+        - 'language': programming language (string)
+    
+    Response JSON:
+        - solution_id: int
+        - results: list of test result dicts
+        - or error message with appropriate status code.
     """
     if request.method != 'POST':
         return JsonResponse({'error': 'Method not allowed'}, status=405)
-
+    
     try:
+        # Parse JSON payload
         data = json.loads(request.body)
         source_code = data.get('code')
         language = data.get('language')
-
+        print(f"Received code for problem {problem_id} in language {language}")
+        # Validate required fields
         if not source_code or not language:
             return JsonResponse({'error': 'Code and language are required'}, status=400)
 
-        # Get the problem and its test cases
+        # Retrieve the problem instance
         problem = get_object_or_404(Problem, pk=problem_id)
-        # Get test cases from file
+
+        # Load test cases from file matching the problem_id pattern
         test_cases = []
+        tests_dir = os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests')
         pattern = re.compile(rf"^{problem_id}_\w+_gemini_tests\.json$")
-        for filename in os.listdir(os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests')):
-            # print(filename)
+        for filename in os.listdir(tests_dir):
             if pattern.match(filename):
-                filepath = os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests', filename)
-                # print(filepath)
+                filepath = os.path.join(tests_dir, filename)
                 with open(filepath, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    test_cases = data['tests']
+                    file_data = json.load(f)
+                    test_cases = file_data.get('tests', [])
                 break
-        # print(test_cases)  # Debug log
-        # Run the code against test cases
+        
+        if not test_cases:
+            return JsonResponse({'error': 'Test cases not found for this problem'}, status=404)
+
+        # Run user code against the test cases using your compiler service
         results = compiler_service.run_tests(source_code, language, test_cases)
-        print(f"Results: {results}")  # Debug log
-        # Create or update solution record
+        # Expected: results is list of objects with attributes like verdict.value, execution_time, etc.
+
+        # Determine overall status for the solution
+        for r in results:
+            print(r)
+            print(f"Test case result: {r.verdict.value}, Time: {r.execution_time}ms, Memory: {r.memory_used}MB")
+        all_passed = all(r.verdict.value == 'AC' for r in results)
+        solution_status = 'accepted' if all_passed else 'wrong_answer'
+        print(f"Solution status: {solution_status}")
+        # Create the Solution object representing this submission
         solution = Solution.objects.create(
             problem=problem,
             user=request.user,
             code=source_code,
             language=language,
-            status='accepted' if all(r.verdict.value == 'AC' for r in results) else 'wrong_answer'
+            status=solution_status
         )
 
-        # Store test results
-        for result, test_case in zip(results, problem.test_cases.filter(is_sample=True)):
+        # Fetch sample test cases from DB, ordered matched with JSON test cases
+        db_tests = list(problem.test_cases.order_by('id'))
+        if len(db_tests) != len(results):
+            print(f"Warning: Expected {len(db_tests)} sample test cases but got {len(results)} results.")
+            # Avoid mismatch to prevent data integrity issue
+            return JsonResponse({'error': 'Mismatch in test cases and results count'}, status=500)
+
+        # Record each test result linked to the solution
+        for result, test_case in zip(results, db_tests):
             TestResult.objects.create(
                 solution=solution,
                 test_case=test_case,
@@ -67,13 +97,25 @@ def compile_and_run(request, problem_id):
                 error_message=result.error_message
             )
 
-        return JsonResponse({
+        # Prepare JSON response with solution ID and test results as dictionaries
+        response_data = {
             'solution_id': solution.id,
-            'results': [r.to_dict() for r in results]
-        })
+            'results': [r.to_dict() for r in results]  # assuming results implement to_dict()
+        }
+        return JsonResponse(response_data)
 
+    except json.JSONDecodeError:
+        return JsonResponse({'error': 'Invalid JSON payload'}, status=400)
+    except Problem.DoesNotExist:
+        return JsonResponse({'error': 'Problem not found'}, status=404)
     except Exception as e:
-        return JsonResponse({'error': str(e)}, status=400)
+        import traceback
+        # Log the exception here (not shown) in production
+        return JsonResponse({
+            'error': str(e),
+            'traceback': traceback.format_exc()
+        }, status=400)
+
 
 @csrf_exempt
 @jwt_required

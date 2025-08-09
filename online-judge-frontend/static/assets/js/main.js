@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     getStartedBtn.addEventListener('click', function() {
         // Redirect to problems page
-        window.location.href = 'pages/problems.html';
+        window.location.href = 'pages/login.html';
     });
     // Initialize your JavaScript here
 });
 
 // Add your JavaScript functions here
-EOFcat > assets/js/main.js << EOF
+// EOFcat > assets/js/main.js << EOF
 // Online Judge Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {

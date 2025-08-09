@@ -1,4 +1,6 @@
-import { API_CONFIG, Auth } from './config.js';
+import { API_CONFIG, Auth } from "../config.js";
+// Importing Auth functions directly from config.js
+import { getSignupToken, saveSignupToken } from './auth.js';
 
 class APIService {
     // Helper to build full URL with optional params (e.g., IDs, query strings)
@@ -36,31 +38,42 @@ class APIService {
     }
 
     static async request(url, options = {}) {
-        const headers = {
-            'Content-Type': 'application/json',
-            ...options.headers
-        };
+    const headers = {
+        'Content-Type': 'application/json',
+        ...options.headers
+    };
 
-        // Get token from Auth and add Authorization header
-        const token = Auth.getToken();
-        if (token) {
-            headers['Authorization'] = `Bearer ${token}`; // Or 'Token' if your backend uses DRF's TokenAuthentication
-        }
+    let token; // declare here once
 
-        const fetchOptions = {
-            ...options,
-            headers,
-        };
-
-        const response = await fetch(url, fetchOptions);
-
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
-        }
-
-        return await response.json();
+    if (url.includes('login')) {
+        console.log('Login URL detected');
+        token = getSignupToken();
+        // Add any additional logic you need here
+    } else {
+        token = Auth.getToken();
     }
+
+    console.log(`Making request to: ${token}`);
+
+    if (token) {
+        headers['Authorization'] = `Bearer ${token}`; // Or 'Token' if your backend uses DRF's TokenAuthentication
+    }
+
+    const fetchOptions = {
+        ...options,
+        headers,
+    };
+
+    const response = await fetch(url, fetchOptions);
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
+    }
+
+    return await response.json();
+}
+
 
 
 
@@ -93,11 +106,17 @@ class APIService {
         }
     }
 
-    static async getSubmissions(problemId = null) {
+    static async getSubmissions(problemId = null, pageId = 1) {
         const query = problemId ? { problem: problemId } : {};
-        const url = API_CONFIG.BASE_URL + API_CONFIG.ENDPOINTS.submissions;
-        return await this.request(url + (Object.keys(query).length ? `?${new URLSearchParams(query)}` : ''), { method: 'GET' });
+        const url = this.buildUrl('submissions', 'list');
+        const queryWithPageId = { ...query, page: pageId };
+        
+        // Construct query string properly
+        const queryString = new URLSearchParams(queryWithPageId).toString();
+        console.log(`Fetching submissions from: ${url}${queryString ? '?' + queryString : ''}`);  // Debug log
+        return await this.request(`${url}${queryString ? '?' + queryString : ''}`, { method: 'GET' });
     }
+
 
     static async getSubmissionDetails(submissionId) {
         const url = this.buildUrl('submissions', 'detail', submissionId);
@@ -143,7 +162,7 @@ class APIService {
 
             // Store token if present
             if (response.token) {
-                Auth.setToken(response.token);
+                saveSignupToken(response.token);
             }
             return { ...response, status: 'success' };
         } catch (error) {

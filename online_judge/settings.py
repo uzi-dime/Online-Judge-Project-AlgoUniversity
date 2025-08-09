@@ -28,7 +28,7 @@ INSTALLED_APPS = [
 ]
 
 CSRF_exempt_views = ['admin']
-    
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -94,8 +94,12 @@ WSGI_APPLICATION = 'online_judge.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'onlinejudge',
+        'USER': 'onlinejudge',
+        'PASSWORD': 'onlinejudge',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -141,7 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # /home/flash/projects/online-judge/online_judge/settings.py
 # ... (other settings)
 
-GEMINI_API_KEY = "AIzaSyAy7NHROyMu3rmQs7SPOwfym4DpyQ2q7bw"  # Replace with your actual key
+GEMINI_API_KEY = "AIzaSyCa9aHPXYtSFktN_KVEsh_dUOVMVTIJe-0"  # Replace with your actual key
 CSES_SCRAPE_DELAY = 5.0
 GEMINI_MODEL = "gemini-1.5-flash"
 

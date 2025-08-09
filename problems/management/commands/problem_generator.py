@@ -136,7 +136,7 @@ HTML STATEMENT:
             self.stdout.write(self.style.ERROR("GEMINI_API_KEY missing in settings.py"))
             return
         genai.configure(api_key=api_key)
-        model = getattr(settings, "GEMINI_MODEL", "gemini-1.5-flash")
+        model = getattr(settings, "GEMINI_MODEL", "gemini-2.5-flash-lite")
         llm = genai.GenerativeModel(model)
 
         # Get default author
@@ -164,11 +164,17 @@ HTML STATEMENT:
         self.stdout.write(f"Loaded {len(problems)} problems")
 
         with transaction.atomic():
-            Problem.objects.all().delete()  # Flush existing problems
+            # Problem.objects.all().delete()  # Flush existing problems
 
             for item in tqdm(problems, desc="Processing", unit="prob"):
+                
                 pid = item.get("id")
                 url = item.get("url")
+                
+                if Problem.objects.filter(id=pid).exists():
+                    self.stdout.write(self.style.WARNING(f"Problem {pid} already exists. Skipping..."))
+                    continue
+                
                 if not pid or not url:
                     self.stdout.write(self.style.WARNING(f"Skipping invalid entry: {item}"))
                     continue
@@ -180,7 +186,7 @@ HTML STATEMENT:
                     except Exception:
                         # Fallback to paid model if free-tier fails
                         if model.endswith("-free"):
-                            llm = genai.GenerativeModel("gemini-1.5-flash")
+                            llm = genai.GenerativeModel("gemini-2.5-flash-lite")
                             data = self.gemini_extract(llm, url, html)
                         else:
                             raise

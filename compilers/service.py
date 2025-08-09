@@ -32,7 +32,7 @@ class CompilerService:
         results = []
         for test_case in test_cases:
             result = compiler.run(source_code, test_case['input'])
-            
+            print(result.output, test_case['output'])
             # Check if output matches expected output
             if result.verdict == Verdict.ACCEPTED:
                 expected_output = test_case['output'].strip()

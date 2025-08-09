@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submissions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/assets/css/custom.css" />
+  <link rel="stylesheet" href="/static/assets/css/submissions.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="container mt-4">
+    <h2>Submissions</h2>
+
+    <table class="table table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>User</th>
+          <th>Problem</th>
+          <th>Status</th>
+          <th>Score</th>
+          <th>Time Submitted</th>
+        </tr>
+      </thead>
+      <tbody class="submissions">
+        <!-- Rows will be dynamically generated here -->
+      </tbody>  
+    </table>
+
+    <!-- Pagination UL to be populated by JS -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <!-- Pagination links will be dynamically inserted here -->
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    // Load navbar dynamically
+    fetch('/components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+  <script type="module" src="/static/assets/js/submissions.js"></script>
+  <script type="module" src="/static/assets/js/services/api.js"></script>
+  <script type="module" src="/static/assets/js/config.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

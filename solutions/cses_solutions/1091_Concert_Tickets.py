@@ -1,34 +1,31 @@
 # CSES Problem: Concert Tickets
 # Problem ID: 1091
-# Generated on: 2025-07-22 20:20:35
+# Generated on: 2025-07-30 22:05:26
 
 import sys
 import bisect
 
-# Read input efficiently
-input = sys.stdin.readline
+def solve():
+    n, m = map(int, sys.stdin.readline().split())
+    tickets = list(map(int, sys.stdin.readline().split()))
+    customers = list(map(int, sys.stdin.readline().split()))
 
-n, m = map(int, input().split())
-ticket_prices = list(map(int, input().split()))
-customer_offers = list(map(int, input().split()))
+    tickets.sort()
+    result = []
+    for price in customers:
+        # Find insertion point where price could be inserted to keep tickets sorted
+        idx = bisect.bisect_right(tickets, price)
+        if idx == 0:
+            # No ticket <= price
+            result.append(-1)
+        else:
+            # Ticket at idx-1 is the best available for this customer
+            result.append(tickets[idx-1])
+            # Remove sold ticket
+            tickets.pop(idx-1)
 
-# Sort ticket prices for binary search
-ticket_prices.sort()
+    print('\n'.join(map(str, result)))
 
-# We'll use a list to simulate a multiset with bisect for efficient search and removal
-from bisect import bisect_right
 
-# Output list for answers
-answers = []
-
-for offer in customer_offers:
-    # Find the rightmost ticket price <= offer
-    idx = bisect_right(ticket_prices, offer) - 1
-    if idx >= 0:
-        answers.append(str(ticket_prices[idx]))
-        # Remove the ticket (O(n), but acceptable with PyPy and only for used tickets)
-        ticket_prices.pop(idx)
-    else:
-        answers.append("-1")
-
-print('\n'.join(answers))
+if __name__ == "__main__":
+    solve()

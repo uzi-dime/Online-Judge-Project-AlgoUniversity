@@ -35,10 +35,16 @@ class User(AbstractUser):
     rating = models.PositiveIntegerField(default=1200)  # Initial ELO rating
     contests_participated = models.PositiveIntegerField(default=0)
     
-    # Achievements
-    badges = models.JSONField(default=list, blank=True, help_text=_('List of earned badges'))
-    experience_points = models.PositiveIntegerField(default=0)
-    
+    # Signup Token
+    signup_token = models.CharField(
+        max_length=500,
+        editable=True,
+        unique=True,
+        default='',
+        null=True,
+        blank=True,
+        help_text=_('Signup token')
+    )    
     # Preferences
     theme_preference = models.CharField(
         max_length=10,

@@ -20,7 +20,7 @@ def evaluate_solution(solution_id):
 
         # Get all test cases for the problem
         test_cases = solution.problem.test_cases.all()
-        
+        # print(test_cases)
         # Initialize compiler service
         compiler_service = CompilerService()
         
@@ -60,8 +60,8 @@ def evaluate_solution(solution_id):
             if result.verdict.value != 'AC':
                 all_passed = False
                 # For hidden test cases, we can stop at first failure
-                if not test_case.is_sample:
-                    break
+                # if not test_case.is_sample:
+                #     break
 
         # Update solution status and metrics
         solution.status = 'accepted' if all_passed else 'wrong_answer'

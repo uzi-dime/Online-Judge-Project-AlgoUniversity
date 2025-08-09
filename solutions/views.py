@@ -25,6 +25,7 @@ def populate_testcases_all(request):
     """
     try:
           # Debug log
+        print(request.user)
         if request.user.is_staff:
             print('Populating test cases for all problems...')
         else:
@@ -32,6 +33,9 @@ def populate_testcases_all(request):
         problems = Problem.objects.all()
         created_testcases = []
         for problem in problems:
+            # Remove existing test cases
+            TestCase.objects.filter(problem=problem).delete()
+
             pattern = re.compile(rf"^{problem.id}_\w+\.json$")
             for filename in os.listdir(os.path.join(settings.BASE_DIR, 'solutions', 'cses_tests')):
                 # print(filename)
@@ -64,15 +68,20 @@ def populate_testcases_all(request):
 @csrf_exempt
 @jwt_required
 def solution_list(request, problem_id=None):
+    print("solution_list called")
     if request.method == 'GET':
         page = int(request.GET.get('page', 1))
         per_page = int(request.GET.get('per_page', 10))
         language = request.GET.get('language')
         status = request.GET.get('status')
-        
+        user = request.GET.get('user')
         # Base queryset
-        solutions = Solution.objects.select_related('user', 'problem')
-        
+        if user:
+            solutions = Solution.objects.select_related('user', 'problem')
+        else:
+            solutions = Solution.objects.all()
+        # print(f"Initial queryset count: {solutions.count()}")
+        # print(solutions)
         # Filter by problem if specified
         if problem_id:
             solutions = solutions.filter(problem_id=problem_id)
@@ -86,8 +95,8 @@ def solution_list(request, problem_id=None):
             solutions = solutions.filter(status=status)
             
         # Users can only see their own solutions unless they have special permission
-        if not request.user.has_perm('solutions.view_all_solutions'):
-            solutions = solutions.filter(user=request.user)
+        # if not request.user.has_perm('solutions.view_all_solutions'):
+        #     solutions = solutions.filter(user=request.user)
         
         paginator = Paginator(solutions, per_page)
         page_obj = paginator.get_page(page)
@@ -150,7 +159,9 @@ def solution_list(request, problem_id=None):
 @csrf_exempt
 @jwt_required
 def solution_detail(request, solution_id):
-    solution = get_object_or_404(Solution, pk=solution_id)
+    solution = Solution.objects.filter(pk=solution_id).first()
+    if not solution:
+        return JsonResponse([], safe=False)
     
     # Check if user has permission to view this solution
     if solution.user != request.user and not request.user.has_perm('solutions.view_all_solutions'):

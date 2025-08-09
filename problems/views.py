@@ -13,7 +13,7 @@ from users.auth import jwt_required
 @jwt_required
 def problem_list(request):
     if request.method == 'GET':
-        page = int(request.GET.get('page', 1))
+        page = request.GET.get('page')
         per_page = int(request.GET.get('per_page', 10))
         difficulty = request.GET.get('difficulty')
         tag = request.GET.get('tag')
@@ -24,15 +24,23 @@ def problem_list(request):
         if tag:
             problems = problems.filter(tags__name=tag)
 
-        paginator = Paginator(problems, per_page)
-        page_obj = paginator.get_page(page)
+        if page:
+            paginator = Paginator(problems, per_page)
+            page_obj = paginator.get_page(page)
+            return JsonResponse({
+                'problems': list(page_obj.object_list.values()),
+                'total_pages': paginator.num_pages,
+                'current_page': page,
+                'total_problems': paginator.count
+            })
+        else:
+            return JsonResponse({
+                'problems': list(problems.values())
+            })
 
-        return JsonResponse({
-            'problems': list(page_obj.object_list.values()),
-            'total_pages': paginator.num_pages,
-            'current_page': page,
-            'total_problems': paginator.count
-        })
+
+
+        
     
     elif request.method == 'POST':
         try:
