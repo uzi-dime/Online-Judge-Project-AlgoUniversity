@@ -1,5 +1,5 @@
 # settings.py (relevant excerpts)
-
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     # Third-party apps (if any)...
 
     # Local apps
+    "django_celery_beat",
     'problems',
     'solutions',
     'compilers',
@@ -44,8 +45,8 @@ MIDDLEWARE = [
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True  # For development only
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
     "http://localhost:8080",
     "http://127.0.0.1:8080",
     "http://localhost:5173",
@@ -95,11 +96,11 @@ WSGI_APPLICATION = 'online_judge.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'onlinejudge',
-        'USER': 'onlinejudge',
-        'PASSWORD': 'onlinejudge',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': os.getenv('DB_NAME', 'onlinejudge'),
+        'USER': os.getenv('DB_USER', 'onlinejudge'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'onlinejudge'),
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 

@@ -1,38 +1,67 @@
-# Use official Python slim base image
+# ================================
+# Debug Dockerfile to test Poetry setup
+# ================================
 FROM python:3.10-slim
 
-# Set environment variables
+# ================================
+# Environment configuration
+# ================================
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     POETRY_NO_INTERACTION=1 \
     POETRY_VIRTUALENVS_CREATE=false \
     PATH="/root/.local/bin:$PATH"
 
-# Install system dependencies needed for building Python packages and Postgres
+# ================================
+# Install system dependencies
+# ================================
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential libpq-dev curl \
+    curl \
+    build-essential \
+    libpq-dev \
+    libffi-dev \
+    libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# ================================
 # Install Poetry
+# ================================
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
+# ================================
 # Set work directory
+# ================================
 WORKDIR /app
 
-# Copy poetry config files first for cache
-COPY pyproject.toml poetry.lock* /app/
+# ================================
+# Copy poetry files and check them
+# ================================
+COPY pyproject.toml poetry.lock* ./
+RUN echo "=== Poetry files copied ===" && ls -la && echo "=== Poetry version ===" && poetry --version
 
-# Install Python dependencies without dev dependencies
-RUN poetry install --no-dev --no-root
+# ================================
+# Show poetry config and install dependencies
+# ================================
+RUN echo "=== Poetry config ===" && poetry config --list \
+    && echo "=== Installing dependencies ===" \
+    && poetry install --only main --no-root --no-cache --dry-run \
+    && echo "=== Actual installation ===" \
+    && poetry install --only main --no-root --no-cache
 
-# Copy entire project source code
-COPY . /app
+# ================================
+# Verify installation
+# ================================
+RUN echo "=== Checking installed packages ===" \
+    && pip list \
+    && echo "=== Testing Django import ===" \
+    && python -c "import django; print('Django version:', django.__version__)" \
+    && echo "=== Testing Celery import ===" \
+    && python -c "import celery; print('Celery version:', celery.__version__)"
 
-# Collect static files
-RUN python manage.py collectstatic --noinput
+# ================================
+# Copy application code
+# ================================
+COPY . /app/
 
-# Expose port 8000 (default Django port)
 EXPOSE 8000
-
-# Run the Django application with Gunicorn WSGI server
-CMD ["gunicorn", "online_judge.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

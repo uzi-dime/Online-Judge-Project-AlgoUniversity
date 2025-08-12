@@ -6,40 +6,130 @@ services:
     restart: always
     environment:
       POSTGRES_DB: online_judge
-      POSTGRES_USER: judge
-      POSTGRES_PASSWORD: judgepass
+      POSTGRES_USER: online_judge
+      POSTGRES_PASSWORD: online_judge
+      POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    # Removed port mapping - internal communication only
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U judge -d online_judge"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    
 
   redis:
-    image: redis:7
+    image: redis:7-alpine
     restart: always
+    # Removed port mapping - internal communication only
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   web:
-    build: .
-    command: gunicorn online_judge.wsgi:application --bind 0.0.0.0:8000
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             python manage.py migrate &&
+             gunicorn online_judge.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 120"
     volumes:
       - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
     ports:
-      - "8000:8000"
+      - "8001:8000"  # Changed from 8000:8000 to 8001:8000
     environment:
-      DATABASE_URL: postgres://judge:judgepass@db:5432/online_judge
-      REDIS_URL: redis://redis:6379/0
+      - DEBUG=0
+      - DATABASE_URL=postgres://online_judge:online_judge@db:5432/online_judge
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=online_judge.settings
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
 
   worker:
-    build: .
-    command: celery -A online_judge worker --loglevel=info
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: poetry run celery -A online_judge worker --loglevel=info --concurrency=2
+    volumes:
+      - .:/app
+      - media_volume:/app/mediafiles
+    environment:
+      - DEBUG=0
+      - DATABASE_URL=postgres://judge:judgepass@db:5432/online_judge
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=online_judge.settings
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      web:
+        condition: service_started
+    restart: unless-stopped
+
+  beat:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: poetry run celery -A online_judge beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
     volumes:
       - .:/app
     environment:
-      DATABASE_URL: postgres://judge:judgepass@db:5432/online_judge
-      REDIS_URL: redis://redis:6379/0
+      - DEBUG=0
+      - DATABASE_URL=postgres://online_judge:online_judge@db:5432/online_judge
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=online_judge.settings
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      web:
+        condition: service_started
+    restart: unless-stopped
+
+  flower:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: poetry run celery -A online_judge flower --port=5555
+    ports:
+      - "5555:5555"
+    environment:
+      - DEBUG=0
+      - DATABASE_URL=postgres://online_judge:online_judge@db:5432/online_judge
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=online_judge.settings
+    depends_on:
       - redis
+      - worker
+    restart: unless-stopped
+    profiles:
+      - monitoring
 
 volumes:
   postgres_data:
+  static_volume:
+  media_volume:
